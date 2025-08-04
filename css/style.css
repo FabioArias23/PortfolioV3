@@ -162,8 +162,8 @@ span {
     justify-content: center;
     align-items: center;
     gap: 2rem; /* Espacio entre la imagen y el texto */
-    background: var(--second-bg-color);
-
+     background: var(--second-bg-color);
+    border-radius: 2.5rem;
     /* --- ESTOS SON LOS CAMBIOS PARA CENTRAR EL BLOQUE --- */
     max-width: 1200px; /* Limita el ancho del contenido */
     margin: 0 auto; /* Centra el bloque horizontalmente */
@@ -171,8 +171,8 @@ span {
 }
 
 .about-img {
-    width: 35vw; /* Ancho de la imagen para la versión de escritorio */
-    height: 35vw;
+     width: 20vw; /* Cambiado a 20vw para que sea más pequeña */
+    height: 20vw; /* Asegúrate de que height sea igual a width */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +180,7 @@ span {
     overflow: hidden;
     position: relative;
     /*border: .2rem solid var(--main-color);*/
-   /* box-shadow: 0 0 1rem var(--main-color);*/
+    /*box-shadow: 0 0 1rem var(--main-color);*/
     animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -199,6 +199,7 @@ span {
 .about-content {
     flex: 1; /* Permite que el contenido ocupe el espacio restante */
 }
+
 
 .about-container {
     display: flex;
