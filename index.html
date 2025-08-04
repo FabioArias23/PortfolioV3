@@ -1,218 +1,801 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Personal Portfolio Website Design | Codehal</title>
+    <title data-lang-key="page_title">
+      Responsive Personal Portfolio Website Design | Codehal
+    </title>
 
-    <!-- box icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-
-    <!-- custom css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9I+P8yJ4FmFq3tX+b7D1P8d4L+Jj8l5zN9y9m295b2l0aC2FjP8d4sK3N2nQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
-    <!-- header design -->
     <header class="header">
-      <a href="#" class="logo"> Porfolio</a>
+      <a href="#" class="logo">Portafolio</a>
       <i class="bx bx-menu" id="menu-icon"></i>
       <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about" id="">About</a>
-        <a href="#services" id="">Service</a>
-        <a href="#portfolio" id="">Portflio</a>
-        <a href="#contact" id="">Contact</a>
+        <a href="#home" class="active" data-lang-key="nav_home">Home</a>
+        <a href="#about" data-lang-key="nav_about">About</a>
+        <a href="#services" data-lang-key="nav_services">Service</a>
+        <a href="#portfolio" data-lang-key="nav_portfolio">Portflio</a>
+        <a href="#certifications" data-lang-key="nav_certifications"
+          >Certifications</a
+        >
+        <a href="#recognitions" data-lang-key="nav_recognitions"
+          >Recognitions</a
+        >
+        <a href="#frameworks" data-lang-key="nav_frameworks"
+          >Frameworks & Technologies</a
+        >
+        <a
+          href="#programming-languages"
+          data-lang-key="nav_programming-languages"
+          >Programming Languages</a
+        >
+        <a href="#contact" data-lang-key="nav_contact">Contact</a>
+        <a
+          href="#"
+          class="language-toggle-btn"
+          id="language-toggle-btn"
+          data-lang-key="nav_lang_toggle"
+          >English</a
+        >
       </nav>
     </header>
-    <!-- home section design -->
+
     <section class="home" id="home">
       <div class="home-content">
-        <h3>Hola yo soy</h3>
+        <h3 data-lang-key="home_greeting">Hola yo soy</h3>
         <h1>Fabio Arias</h1>
-        <h3>Yo soy <span class="multiple-text">FullStack Developer</span></h3>
-        <p>Manejo diferentes tecnologia, con alto nivel tecnico</p>
+        <h3>
+          <span data-lang-key="home_role_static">Yo soy</span>
+          <span class="multiple-text"></span>
+        </h3>
+        <p data-lang-key="home_description">
+          Manejo diferentes tecnologías, con alto nivel técnico
+        </p>
         <div class="social-media">
-          <a href="#"><i class="bx bxl-facebook"></i></a>
-          <a href="#"><i class="bx bxl-twitter"></i></a>
-          <a href="#"><i class="bx bxl-instagram"></i></a>
-          <a href="#"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/FabioArias23"><i class="bx bxl-github"></i></a>
+          <a href="https://www.instagram.com/fabioadriarias/"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/fabio-arias-0515691b9/"><i class="bx bxl-linkedin"></i></a>
         </div>
-        <a href="#" class="btn">Descargar CV</a>
+        <a href="images/curriculum/CV_Fabio_Arias (4).pdf" class="btn" data-lang-key="download_cv">Descargar CV</a>
       </div>
-
       <div class="contenedor-foto">
-        <img src="images/fabio.jpg" alt="Tu foto de perfil" />
+        <img src="images/fabio.jpg" alt="Foto de perfil de Fabio Arias" />
       </div>
     </section>
-    <!-- about section design -->
 
     <section class="about" id="about">
       <div class="about-img">
-        <img src="images/fabio.jpg" alt="" />
+        <img src="images/fabio.jpg" alt="Foto de perfil de Fabio Arias" />
       </div>
       <div class="about-content">
-        <h2 class="heading">Acerca de <span> Mi </span></h2>
-        <h3>Desarrollador Full-Stack</h3>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-          eligendi tempore rem sed officia quaerat ea numquam deleniti
-          assumenda, dignissimos tenetur modi mollitia accusamus exercitationem,
-          porro, nisi eius tempora natus?
+        <h2 class="heading" data-lang-key="about_heading">
+          Acerca de <span data-lang-key="about_heading_span"> Mi </span>
+        </h2>
+        <h3 data-lang-key="about_role">Desarrollador Full-Stack</h3>
+        <p data-lang-key="about_description">
+          Soy un desarrollador Full-Stack con experiencia en la creación de
+          aplicaciones web robustas y escalables. Me especializo en tecnologías
+          Angular y Vue.js para construir interfaces de usuario intuitivas y en
+          backend tecnologías como Node.js y Laravel para diseñar APIs
+          eficientes y seguras. Mi objetivo es combinar mi pasión por el código
+          con la resolución de problemas para entregar soluciones de alto
+          rendimiento.
         </p>
-        <a href="#" class="btn"> Read Me </a>
       </div>
     </section>
 
-    <!-- services section design -->
     <section class="services" id="services">
-      <h2 class="heading">Our <span> Services</span></h2>
-
+      <h2 class="heading" data-lang-key="services_heading">
+        Nuestros <span data-lang-key="services_heading_span">Servicios</span>
+      </h2>
       <div class="services-container">
         <div class="services-box">
           <i class="bx bx-code-alt"></i>
-          <h3>Frontend</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sequi
-            natus necessitatibus beatae corrupti ducimus voluptatem placeat,
-            consectetur optio maiores harum excepturi vitae explicabo, sunt
-            voluptatum! Minima sequi maiores laboriosam?
+          <h3 data-lang-key="service_frontend_title">Frontend</h3>
+          <p data-lang-key="service_frontend_description">
+            Uso Frameworks como Angular, Vue.js. Manejo diferentes motores de
+            plantillas tales como Handlebars, Pugs, Ejs. Con JavaScript, manejo
+            diferentes motores de plantillas con PHP como Livewire.
           </p>
-          <a href="#" class="btn">Read More</a>
         </div>
-
         <div class="services-box">
-          <i class='bx bx-git-commit'></i>
-          <h3>GitHub</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
-            dignissimo vitae magni aut commodi non laborum nisi alias iusto
-            voluptatibus.
+          <i class="bx bx-git-commit"></i>
+          <h3 data-lang-key="service_github_title">GitHub</h3>
+          <p data-lang-key="service_github_description">
+            Manejo del controlador de versiones como Git, GitHub, con sus
+            diferentes tipos de comandos para cada rama.
           </p>
-          <a href="#" class="btn">Read More</a>
         </div>
         <div class="services-box">
           <i class="bx bx-server"></i>
-          <h3>Backend</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
-            dignissimos vitae magni aut commodi non laborum nisi alias iusto
-            voluptatibus.a
+          <h3 data-lang-key="service_backend_title">Backend</h3>
+          <p data-lang-key="service_backend_description">
+            Uso diferentes tecnologías para desarrollar arquitectura de alto
+            nivel y rendimiento, sostenible con el tiempo. Manejo tecnologías
+            para levantar servidores como: C, C++, Java, Node, Express, NestJS,
+            PHP con Eloquent.
           </p>
-          <a href="#" class="btn">Read More</a>
         </div>
       </div>
     </section>
-    <!-- portfolio section design -->
-    <section class="portfolio" id="portfolio">
-    <h2 class="heading">Latest <span>Project</span></h2>
 
-    <div class="portfolio-container">
-        <div class="portfolio-box">
-            <img src="images/portfolio1.jpg" alt="Proyecto 1">
-            <div class="portfolio-layer">
-                <h4>Desarrollador Web</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                   Consequatur iure </p>
-                <a href="#"><i class="bx bx-link-external"></i></a>
-            </div>
+    <section class="services" id="certifications">
+      <h2 class="heading" data-lang-key="certifications_heading">
+        Mis
+        <span data-lang-key="certifications_heading_span">Certificaciones</span>
+      </h2>
+      <div class="services-container">
+        <div class="services-box">
+          <img
+            src="images/certificaciones/APIRESTDonWeb.png"
+            alt="Certificación API REST DonWeb"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_api_rest_title">
+            API desde cero con NodeJS y Express
+          </h3>
+          <p data-lang-key="cert_api_rest_description">
+            Certificado sobre la creación y gestión de APIs RESTful en el
+            entorno de DonWeb.
+          </p>
         </div>
-
-        <div class="portfolio-box">
-            <img src="images/portfolio2.jpg" alt="Proyecto 2">
-            <div class="portfolio-layer">
-                <h4>Desarrollador Web</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                   Consequatur iure</p>
-                <a href="#"><i class="bx bx-link-external"></i></a>
-            </div>
+        <div class="services-box">
+          <img
+            src="images/certificaciones/AprendeReactFirebase.jpg"
+            alt="Certificación Aprende React Firebase"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_react_firebase_title">
+            Aprende React+Firebase
+          </h3>
+          <p data-lang-key="cert_react_firebase_description">
+            Certificado sobre el desarrollo de aplicaciones con React y el uso
+            de Firebase para la base de datos.
+          </p>
         </div>
-
-        <div class="portfolio-box">
-            <img src="images/portfolio3.jpg" alt="Proyecto 3">
-            <div class="portfolio-layer">
-                <h4>Desarrollador Web</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                   Consequatur iure </p>
-                <a href="#"><i class="bx bx-link-external"></i></a>
-            </div>
+        <div class="services-box">
+          <img
+            src="images/certificaciones/Aprender-Typescript.jpg"
+            alt="Certificación Aprender Typescript"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_typescript_title">
+            Aprender Typescript de 0 a 100
+          </h3>
+          <p data-lang-key="cert_typescript_description">
+            Certificación en el uso de TypeScript, desde los fundamentos hasta
+            la aplicación en proyectos de mayor escala.
+          </p>
         </div>
-
-        <div class="portfolio-box">
-            <img src="images/portfolio4.jpg" alt="Proyecto 4">
-            <div class="portfolio-layer">
-                <h4>Desarrollador Web</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                   Consequatur iure </p>
-                <a href="#"><i class="bx bx-link-external"></i></a>
-            </div>
+        <div class="services-box">
+          <img
+            src="images/certificaciones/Aprendizaje-basado-en-proyectos.jpeg"
+            alt="Certificación Aprendizaje basado en proyectos"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_project_based_learning_title">
+            Aprendizaje basado en proyectos
+          </h3>
+          <p data-lang-key="cert_project_based_learning_description">
+            Certificado sobre la metodología de aprendizaje práctica a través de
+            la realización de proyectos.
+          </p>
         </div>
-
-        <div class="portfolio-box">
-            <img src="images/portfolio5.jpg" alt="Proyecto 5">
-            <div class="portfolio-layer">
-                <h4>Desarrollador Web</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                   Consequatur iure</p>
-                <a href="#"><i class="bx bx-link-external"></i></a>
-            </div>
+        <div class="services-box">
+          <img
+            src="images/certificaciones/CapacitacionGestionDelTiempo.jpeg"
+            alt="Certificación Capacitación en Gestión del Tiempo"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_time_management_title">
+            Capacitación Gestión del Tiempo
+          </h3>
+          <p data-lang-key="cert_time_management_description">
+            Certificado sobre técnicas y estrategias efectivas para la gestión
+            del tiempo y la productividad.
+          </p>
         </div>
-
-        <div class="portfolio-box">
-            <img src="images/portfolio6.jpg" alt="Proyecto 6">
-            <div class="portfolio-layer">
-                <h4>Desarrollador Web</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                   Consequatur iure .</p>
-                <a href="#"><i class="bx bx-link-external"></i></a>
-            </div>
+        <div class="services-box">
+          <img
+            src="images/certificaciones/Como-Enselar-Desarrollo-Web.jpeg"
+            alt="Certificación Cómo enseñar desarrollo web"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_web_dev_teaching_title">
+            Cómo enseñar Desarrollo Web
+          </h3>
+          <p data-lang-key="cert_web_dev_teaching_description">
+            Certificado sobre metodologías para la enseñanza del desarrollo web.
+          </p>
         </div>
-    </div>
-</section>
-    <!-- contact section design -->
-    <section class="contact" id="contact">
-      <h2 class="heading">Contact <span> Me!</span></h2>
-      <form action="#">
-          <div class="input-box"> 
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email Address">
-
-          </div>
-           <div class="input-box"> 
-            <input type="number" placeholder="Mobile Number">
-            <input type="text" placeholder="Email Subject">
-          </div>
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Messages"></textarea>
-          <input type="submit" value="send messages" class="btn ">
-      
-        </form>
+        <div class="services-box">
+          <img
+            src="images/certificaciones/DonWebMERN.png"
+            alt="Certificación DonWeb MERN"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_mern_stack_title">
+            Desarrollo fullstack de aplicaciones con stack MERN
+          </h3>
+          <p data-lang-key="cert_mern_stack_description">
+            Certificado de desarrollo web con el stack MERN en la plataforma
+            DonWeb.
+          </p>
+        </div>
+        <div class="services-box">
+          <img
+            src="images/certificaciones/El-ABC-de-dar-clases.jpeg"
+            alt="Certificación El ABC de dar clases"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_giving_classes_title">
+            El ABC de dar clases
+          </h3>
+          <p data-lang-key="cert_giving_classes_description">
+            Certificado sobre los fundamentos básicos para impartir clases y
+            capacitaciones.
+          </p>
+        </div>
+        <div class="services-box">
+          <img
+            src="images/certificaciones/Fundamentos.png"
+            alt="Certificación Fundamentos"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_ai_fundamentals_title">
+            Fundamentos de la Inteligencia Artificial
+          </h3>
+          <p data-lang-key="cert_ai_fundamentals_description">
+            Certificado sobre los conceptos fundamentales de programación y
+            desarrollo de software.
+          </p>
+        </div>
+        <div class="services-box">
+          <img
+            src="images/certificaciones/MasterenJavascriptAngularNodejs.jpg"
+            alt="Certificación Master en Javascript Angular Nodejs"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_js_master_title">
+            Master en Javascript:ECMAScript, Angular +9, React, NodeJS
+          </h3>
+          <p data-lang-key="cert_js_master_description">
+            Certificación completa sobre desarrollo full-stack con JavaScript,
+            cubriendo el frontend con Angular y el backend con Node.js.
+          </p>
+        </div>
+        <div class="services-box">
+          <img
+            src="images/certificaciones/Nest-Desarrollo-Backend-Con-Node.jpeg"
+            alt="Certificación Nest: Desarrollo Backend con Node"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_nest_backend_title">
+            Nest: Desarrollo Backend Con Node
+          </h3>
+          <p data-lang-key="cert_nest_backend_description">
+            Curso enfocado en el desarrollo de APIs robustas y escalables
+            utilizando el framework NestJS con Node.js.
+          </p>
+        </div>
+        <div class="services-box">
+          <img
+            src="images/certificaciones/NestjsMicroservices.jpg"
+            alt="Certificación NestJS Microservicios"
+            class="certification-img"
+          />
+          <h3 data-lang-key="cert_nestjs_microservices_title">
+            NestJS: Microservicios con Nestjs, AWS, Docker Profesional
+          </h3>
+          <p data-lang-key="cert_nestjs_microservices_description">
+            Certificación sobre la arquitectura de microservicios con NestJS,
+            integrando tecnologías como AWS y Docker para despliegues
+            profesionales.
+          </p>
+        </div>
+      </div>
+      <div id="pagination-container" class="pagination-container"></div>
     </section>
-    <!-- footer design -->
+
+    <section class="services" id="recognitions">
+      <h2 class="heading" data-lang-key="recognitions_heading">
+        Mis
+        <span data-lang-key="recognitions_heading_span">Reconocimientos</span>
+      </h2>
+      <div class="services-container">
+        <div class="services-box">
+          <img
+            src="images/reconocimiento/Agradecimiento.jpeg"
+            alt="Reconocimiento Coder Buddies"
+            class="certification-img"
+          />
+          <h3 data-lang-key="rec_coderhouse_title">
+            Agradecimiento de Coderhouse
+          </h3>
+          <p data-lang-key="rec_coderhouse_description">
+            Agradecimiento por evento Coder Buddies: Evento por el cual
+            CoderHouse de tutores, donde ayudabamos a los nuevos ingresante de
+            la empresa con su trabajo, para que no se estanquen y puedan seguir
+            corrigiendo. Esto no era remunerado, lo haciamos AdHonerem
+          </p>
+        </div>
+        <div class="services-box">
+          <img
+            src="images/reconocimiento/Tutorias-Pedagogia.jpeg"
+            alt="Reconocimiento Staff Backstage"
+            class="certification-img"
+          />
+          <h3 data-lang-key="rec_staff_backstage_title">
+            Buenas practicas: tutorias, pedagogia y networking.
+          </h3>
+          <p data-lang-key="rec_staff_backstage_description">
+            Agradecimiento por participar en el evento colaborativo para Staff
+            Academico.
+          </p>
+        </div>
+        <div class="services-box">
+          <img
+            src="images/reconocimiento/Reconocimiento.jpeg"
+            alt="Reconocimiento por excelente desempeño"
+            class="certification-img"
+          />
+          <h3 data-lang-key="rec_excellent_perf_title">
+            Reconocimiento por excelente desempeño
+          </h3>
+          <p data-lang-key="rec_excellent_perf_description">
+            Agradecimiento por parte de CoderHouse a mi trabajo por ser parte de
+            la empresa, acompañarlos en la mision de decomocratizar la educacion
+            brindando excepcionales clases con gran dedicacion y compromiso.
+          </p>
+        </div>
+        <div class="services-box">
+          <img
+            src="images/reconocimiento/democratizando.png"
+            alt="Reconocimiento al mes de la educación"
+            class="certification-img"
+          />
+          <h3 data-lang-key="rec_education_month_title">
+            Reconocimiento al mes de la educacion
+          </h3>
+          <p data-lang-key="rec_education_month_description">
+            Agradecimiento por formar parte del cambio y acompañarlos en la
+            mision de formar a los estudiantes La enseñanza es mas que impartir
+            conocimiento, es inspirar el cambio
+          </p>
+        </div>
+        <div class="services-box">
+          <img
+            src="images/reconocimiento/ReconocimientoSql.jpeg"
+            alt="Reconocimiento nuevo rol en la empresa"
+            class="certification-img"
+          />
+          <h3 data-lang-key="rec_new_role_title">
+            Felicitaciones y reconocimiento por tomar nuevo rol en la empresa
+          </h3>
+          <p data-lang-key="rec_new_role_description">
+            Celebrando el compromiso notable por este notable logro.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="frameworks">
+      <h2 class="heading" data-lang-key="frameworks_heading_title">
+        <span data-lang-key="frameworks_heading_span">Frameworks</span> y
+        Tecnologías
+      </h2>
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bxl-html5"></i>
+          <h3 data-lang-key="html_title">HTML</h3>
+          <p data-lang-key="html_description">
+            Sólido conocimiento en la estructura y semántica de HTML5 para crear
+            la base de cualquier sitio web.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-css3"></i>
+          <h3 data-lang-key="css_title">CSS</h3>
+          <p data-lang-key="css_description">
+            Experiencia en el diseño y estilizado de interfaces de usuario
+            modernas y responsivas con CSS3.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-tailwind-css"></i>
+          <h3 data-lang-key="tailwind_title">Tailwind CSS</h3>
+          <p data-lang-key="tailwind_description">
+            Dominio del framework de CSS utilitario para un desarrollo rápido y
+            eficiente de interfaces.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-angular"></i>
+          <h3 data-lang-key="angular_title">Angular</h3>
+          <p data-lang-key="angular_description">
+            Experiencia en el desarrollo de aplicaciones de una sola página
+            (SPA) con el framework de Google, utilizando componentes y
+            servicios.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-react"></i>
+          <h3 data-lang-key="react_title">React</h3>
+          <p data-lang-key="react_description">
+            Habilidad en el desarrollo de interfaces de usuario con la librería
+            de Facebook, incluyendo el uso de componentes, hooks y el ecosistema
+            de React.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-vuejs"></i>
+          <h3 data-lang-key="vue_title">Vue</h3>
+          <p data-lang-key="vue_description">
+            Conocimiento del framework progresivo Vue.js para la creación de
+            interfaces de usuario de manera sencilla y eficiente.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-php"></i>
+          <h3 data-lang-key="composer_title">Composer</h3>
+          <p data-lang-key="composer_description">
+            Uso del gestor de dependencias de PHP para la correcta gestión de
+            librerías y frameworks en proyectos.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-php"></i>
+          <h3 data-lang-key="laravel_title">Laravel</h3>
+          <p data-lang-key="laravel_description">
+            Manejo del framework de PHP para la creación de aplicaciones web
+            sofisticadas con una sintaxis elegante y expresiva.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-bolt-circle"></i>
+          <h3 data-lang-key="livewire_title">Livewire</h3>
+          <p data-lang-key="livewire_description">
+            Experiencia en el desarrollo full-stack con Laravel Livewire para
+            construir interfaces dinámicas sin necesidad de escribir JavaScript.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-code-alt"></i>
+          <h3 data-lang-key="handlebars_title">Handlebars</h3>
+          <p data-lang-key="handlebars_description">
+            Conocimiento del sistema de plantillas para generar HTML dinámico en
+            el lado del servidor o del cliente de manera eficiente.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-sync"></i>
+          <h3 data-lang-key="sockets_title">Sockets</h3>
+          <p data-lang-key="sockets_description">
+            Habilidad para implementar comunicación en tiempo real en
+            aplicaciones web con tecnologías como WebSockets o Socket.IO.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-server"></i>
+          <h3 data-lang-key="express_title">Express.js</h3>
+          <p data-lang-key="express_description">
+            Dominio del framework de Node.js para la construcción de APIs
+            RESTful y el desarrollo de aplicaciones backend.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-server"></i>
+          <h3 data-lang-key="nestjs_title">NestJS</h3>
+          <p data-lang-key="nestjs_description">
+            Habilidad en el framework progresivo de Node.js, utilizado para la
+            creación de aplicaciones del lado del servidor escalables y
+            eficientes.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-postgresql"></i>
+          <h3 data-lang-key="postgresql_title">PostgreSQL</h3>
+          <p data-lang-key="postgresql_description">
+            Manejo de la base de datos relacional robusta y de código abierto
+            para gestionar datos de aplicaciones complejas.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-mongodb"></i>
+          <h3 data-lang-key="mongodb_title">MongoDB</h3>
+          <p data-lang-key="mongodb_description">
+            Experiencia con la base de datos NoSQL orientada a documentos, ideal
+            para el desarrollo de aplicaciones modernas y flexibles.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-envelope"></i>
+          <h3 data-lang-key="email_services_title">Servicios de Email</h3>
+          <p data-lang-key="email_services_description">
+            Experiencia en la implementación de servicios para el envío de
+            notificaciones por correo electrónico, como restablecimiento de
+            contraseñas y verificaciones de cuenta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="programming-languages">
+      <h2 class="heading" data-lang-key="languages_heading">
+        Lenguajes de
+        <span data-lang-key="languages_heading_span">Programación</span>
+      </h2>
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bx-terminal"></i>
+          <h3 data-lang-key="c_title">C</h3>
+          <p data-lang-key="c_description">
+            Sólidos fundamentos en el lenguaje de programación C, incluyendo
+            manejo de memoria, estructuras de datos y algoritmos.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-terminal"></i>
+          <h3 data-lang-key="c_plus_plus_title">C++</h3>
+          <p data-lang-key="c_plus_plus_description">
+            Manejo del lenguaje C++ para el desarrollo de sistemas de alto
+            rendimiento, aplicando principios de programación orientada a
+            objetos (POO).
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-javascript"></i>
+          <h3 data-lang-key="javascript_title">JavaScript</h3>
+          <p data-lang-key="javascript_description">
+            Manejo avanzado del lenguaje para la creación de funcionalidades
+            dinámicas, interactividad y manipulación del DOM.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-typescript"></i>
+          <h3 data-lang-key="typescript_title">TypeScript</h3>
+          <p data-lang-key="typescript_description">
+            Uso de TypeScript para escribir código más robusto y escalable, con
+            tipado estático que mejora el desarrollo de proyectos complejos.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-server"></i>
+          <h3 data-lang-key="mysql_title">MySQL</h3>
+          <p data-lang-key="mysql_description">
+            Conocimiento en el uso de la base de datos relacional más popular
+            para el almacenamiento y gestión de datos.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-php"></i>
+          <h3 data-lang-key="php_title">PHP</h3>
+          <p data-lang-key="php_description">
+            Dominio del lenguaje de scripting del lado del servidor, utilizado
+            para el desarrollo web robusto y dinámico.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="dependency-managers">
+      <h2 class="heading" data-lang-key="managers_heading">
+        Manejadores de
+        <span data-lang-key="managers_heading_span">Dependencias</span>
+      </h2>
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bx-box"></i>
+          <h3 data-lang-key="npm_title">NPM</h3>
+          <p data-lang-key="npm_description">
+            Manejo del gestor de paquetes por defecto de Node.js, esencial para
+            instalar y gestionar librerías en proyectos de JavaScript y
+            TypeScript.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-box"></i>
+          <h3 data-lang-key="yarn_title">YARN</h3>
+          <p data-lang-key="yarn_description">
+            Uso de este gestor de paquetes rápido, seguro y confiable,
+            compatible con el ecosistema de npm.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-package"></i>
+          <h3 data-lang-key="pnpm_title">PNPM</h3>
+          <p data-lang-key="pnpm_description">
+            Manejo del gestor de paquetes para Node.js, reconocido por su gran
+            eficiencia en el uso del espacio de disco y su velocidad en la
+            instalación.
+          </p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-php"></i>
+          <h3 data-lang-key="composer_title">Composer</h3>
+          <p data-lang-key="composer_description">
+            Dominio del gestor de dependencias para PHP, fundamental para la
+            gestión de frameworks como Laravel y otras librerías.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading" data-lang-key="portfolio_heading">
+        Últimos <span data-lang-key="portfolio_heading_span">Proyectos</span>
+      </h2>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="images/portfolio1.jpg" alt="Proyecto 1" />
+          <div class="portfolio-layer">
+            <h4 data-lang-key="project_tesloshop_frontend_title">
+              Aplicación TesloShop Frontend
+            </h4>
+            <p data-lang-key="project_tesloshop_frontend_description"></p>
+            <a
+              href="https://github.com/FabioArias23/ViteVanilla-TesloWebSocket"
+            >
+              <i class="bx bx-link-external"></i>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="images/portfolio2.jpg" alt="Proyecto 2" />
+          <div class="portfolio-layer">
+            <h4 data-lang-key="project_tesloshop_backend_title">
+              Aplicación de TesloShop Backend
+            </h4>
+            <p data-lang-key="project_tesloshop_backend_description"></p>
+            <a href="https://github.com/FabioArias23/teslo-shop">
+              <i class="bx bx-link-external"></i>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="images/portfolio3.jpg" alt="Proyecto 3" />
+          <div class="portfolio-layer">
+            <h4 data-lang-key="project_superflight_title">
+              Aplicación de SuperFlight
+            </h4>
+            <p data-lang-key="project_superflight_description"></p>
+            <a
+              href="https://github.com/FabioArias23/NestJS-ApiSuperFlights-MONGODBB"
+            >
+              <i class="bx bx-link-external"></i>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="images/portfolio4.jpg" alt="Proyecto 4" />
+          <div class="portfolio-layer">
+            <h4 data-lang-key="project_microservices_title">
+              Aplicación con MicroServicios AWS/Docker
+            </h4>
+            <p data-lang-key="project_microservices_description"></p>
+            <a
+              href="https://github.com/FabioArias23/NESTJS-CON-MICRO-SERVICIO-AWS"
+            >
+              <i class="bx bx-link-external"></i>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="images/portfolio5.jpg" alt="Proyecto 5" />
+          <div class="portfolio-layer">
+            <h4 data-lang-key="project_workshop_mgmt_title">
+              Aplicación Gestión de Talleres
+            </h4>
+            <p data-lang-key="project_workshop_mgmt_description"></p>
+            <a href="https://github.com/FabioArias23/API-PHP">
+              <i class="bx bx-link-external"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="curriculum">
+      <h2 class="heading" data-lang-key="curriculum_heading">
+        Mis <span data-lang-key="curriculum_heading_span">Curriculums</span>
+      </h2>
+      <div class="services-container">
+        <div class="services-box">
+          <img
+            src="images/curriculum/CVFabioArias.jpg"
+            alt="Curriculum en Español"
+            class="curriculum-img-es"
+          />
+          <h3 data-lang-key="curriculum_title_es">Curriculum en Español</h3>
+          <p data-lang-key="curriculum_description_es"></p>
+        </div>
+
+        <div class="services-box">
+          <img
+            src="images/curriculum/cv-formato-ingles.jpg"
+            alt="Curriculum en Inglés"
+            class="curriculum-img-en"
+          />
+          <h3 data-lang-key="curriculum_title_en">Curriculum en Inglés</h3>
+          <p data-lang-key="curriculum_description_en"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="contact" id="contact">
+      <h2 class="heading" data-lang-key="contact_heading">
+        Contacta <span data-lang-key="contact_heading_span"> Conmigo</span>
+      </h2>
+      <form action="#">
+        <div class="input-box">
+          <input
+            type="text"
+            placeholder="Nombre Completo"
+            data-lang-key="contact_full_name_placeholder"
+          />
+          <input
+            type="email"
+            placeholder="Dirección de Correo Electrónico"
+            data-lang-key="contact_email_placeholder"
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="number"
+            placeholder="Número de Teléfono"
+            data-lang-key="contact_mobile_placeholder"
+          />
+          <input
+            type="text"
+            placeholder="Asunto del Correo"
+            data-lang-key="contact_subject_placeholder"
+          />
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Tu Mensaje"
+          data-lang-key="contact_message_placeholder"
+        ></textarea>
+        <input
+          type="submit"
+          value="Enviar Mensaje"
+          class="btn"
+          data-lang-key="contact_submit_btn"
+        />
+      </form>
+    </section> -->
 
     <footer class="footer">
-        <div class="footer-text">
-            <p> Copyright &copy;
-               2025 by Fabio Arias | All Rights Reserved.
-               2025 by Fabio Arias | Todos Los Derechos Reservados</p>
-        </div>
-        <div class="footer-iconTop">
-          <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-        </div>
+      <div class="footer-text">
+        <p data-lang-key="footer_copyright_text">
+          Copyright &copy; 2025 by Fabio Arias | Todos los Derechos Reservados.
+        </p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
     </footer>
 
-    <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- typed js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- custom js -->
-     
     <script src="js/script.js"></script>
   </body>
 </html>

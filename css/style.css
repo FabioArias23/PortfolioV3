@@ -8,95 +8,97 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif';
 }
 
-:root{
-
+:root {
     --bg-color: #1f242d;
     --second-bg-color: #323946;
     --text-color: #fff;
-    --main-color:#00e0b3;
+    --main-color: #00e0b3;
 }
 
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
-body{
-
+body {
     background: var(--bg-color);
     color: var(--text-color);
 }
 
-section{
+section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 
-
-.header{
+.header {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     padding: 2rem 9%;
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     z-index: 100;
 }
 
-.logo{
-    font-size:2.5rem;
+.logo {
+    font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
     cursor: default;
 }
 
-.navbar a{
+.navbar a {
     font-size: 1.7rem;
-    color:var(--text-color);
+    color: var(--text-color);
     margin-left: 4rem;
     transition: .3s;
 }
 
 .navbar a.hover,
 .navbar a.active {
-    color:var(--main-color);
+    color: var(--main-color);
 }
 
 #menu-icon {
-    font-size: 3.6rem; 
+    font-size: 3.6rem;
     color: var(--text-color);
     display: none;
 }
-.home{
-    display: flex;
-    justify-content:center;
-    align-items:center;
-}
-.home-content h3{
-    font-size:3.2rem;
-    font-weight: 700;
 
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.home-content h3:nth-of-type(2){
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
     margin-bottom: 2rem;
 }
-.home-content h1{
+
+.home-content h1 {
     font-size: 5.6rem;
     font-weight: 700;
-    line-height:1.3;
+    line-height: 1.3;
 }
-span{
-    color:var(--main-color);
+
+span {
+    color: var(--main-color);
 }
-.btn{
+
+.btn {
     display: inline-block;
-    padding:1rem 2.8rem;
+    padding: 1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--main-color);
@@ -106,14 +108,16 @@ span{
     font-weight: 600;
     transition: .5s ease;
 }
-.btn:hover{
-    box-shadow:none;
+
+.btn:hover {
+    box-shadow: none;
 }
 
-.home-content p{
+.home-content p {
     font-size: 1.6rem;
 }
-.social-media a{
+
+.social-media a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -121,144 +125,148 @@ span{
     height: 4rem;
     background: transparent;
     border: .2rem solid var(--main-color);
-    border-radius: 50%; /* ¡Añadido para hacer el círculo! */
+    border-radius: 50%;
     margin: 3rem 1.5rem 3rem 0;
-    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
-    color: var(--main-color); /* ¡Añadido para dar color al ícono dentro del enlace! */
-    font-size: 2.2rem; /* Tamaño del ícono, puedes ajustarlo si 4rem es muy grande */
-    transition: .5s ease; /* Transición para un efecto suave al pasar el ratón */
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 2.2rem;
+    transition: .5s ease;
 }
 
-.social-media a:hover{
+.social-media a:hover {
     background: var(--main-color);
     color: var(--second-bg-color);
-    box-shadow: 0 0 0 1rem var(--main-color)
-
-
-
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
-.about{
-    display:flex;
+.about {
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     background: var(--second-bg-color);
 }
 
+.contenedor-foto {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+}
 
-.about img {
-    width: 100%;  /* La imagen dentro del contenedor ocupará el 100% del ancho de su contenedor. */
-    height: 100%; /* La imagen dentro del contenedor ocupará el 100% de la altura de su contenedor. */
-    object-fit: cover; /* **Clave para que tu foto se vea bien:** Esto hace que la imagen se "ajuste" al contenedor, cubriéndolo completamente. Si la foto es más grande o tiene proporciones diferentes, se recortará automáticamente (sin distorsionarse) para llenar el espacio. */
-    display: block; /* Elimina cualquier espacio en blanco no deseado que los navegadores añaden a veces debajo de las imágenes. */
+.about-img img,
+.contenedor-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-img img {
+    width: 35vw;
     border-radius: 50%;
 }
 
-
-
-.about-img img{
-   width: 35vw; 
-}
-
-.heading{
-    text-align:center;
+.heading {
+    text-align: center;
     font-size: 4.5rem;
 }
 
-.about-content h2{
-    text-align:left;
+.about-content h2 {
+    text-align: left;
     line-height: 1.2;
 }
 
-.about-content h3{
+.about-content h3 {
     font-size: 2.6rem;
 }
 
-.about-content p{
+.about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
 
-
-.contenedor-foto img{
-    width: 35vw;
-}
-.contenedor-foto {
-    width: 450px;  /* **Ancho del espacio:** Aquí puedes ajustar qué tan ancho quieres que sea el espacio de la foto. */
-    height: 450px; /* **Altura del espacio:** Aquí puedes ajustar qué tan alto quieres que sea el espacio. */
-    border-radius: 50%; /* **Para hacer la foto redonda.** Si quieres que sea cuadrada, quita esta línea. */
-    overflow: hidden; /* **Importante:** Recorta cualquier parte de la imagen que se salga del contenedor, especialmente útil para fotos redondas. */
-    margin: 20px auto; /* Para centrar el contenedor horizontalmente y darle un poco de espacio superior e inferior. */
-    border: 1px solid #ddd; /* Un borde sutil alrededor de la foto. */
+/* --- SECCION DE SERVICIOS Y CERTIFICACIONES --- */
+.services h2.heading {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 4.5rem;
+    color: var(--text-color);
 }
 
-.contenedor-foto img {
-    width: 100%;  /* La imagen dentro del contenedor ocupará el 100% del ancho de su contenedor. */
-    height: 100%; /* La imagen dentro del contenedor ocupará el 100% de la altura de su contenedor. */
-    object-fit: cover; /* **Clave para que tu foto se vea bien:** Esto hace que la imagen se "ajuste" al contenedor, cubriéndolo completamente. Si la foto es más grande o tiene proporciones diferentes, se recortará automáticamente (sin distorsionarse) para llenar el espacio. */
-    display: block; /* Elimina cualquier espacio en blanco no deseado que los navegadores añaden a veces debajo de las imágenes. */
-}
-/* Estilo para el título principal de la sección */
-.services h2.heading { /* Si tu <h2> tiene la clase 'heading', esto es más específico */
-    text-align: center; /* Centra el título "Our Services" */
-    margin-bottom: 5rem; /* Margen debajo del título */
-    font-size: 4.5rem; /* Ajusta el tamaño de la fuente si es necesario */
-    color: var(--text-color); /* Color del texto del título */
-}
 
 .services h2.heading span {
-    color: var(--main-color); /* Color para la palabra "Services" */
+    color: var(--main-color);
 }
 
-/* Contenedor principal de las cajas de servicio */
 .services-container {
-    display: flex; /* Habilitar Flexbox */
-    justify-content: center; /* Centrar las cajas horizontalmente en el contenedor */
-    align-items: stretch; /* Opcional: Hace que todas las cajas tengan la misma altura */
-    flex-wrap: wrap; /* Permite que las cajas salten de línea en pantallas pequeñas */
-    gap: 2rem; /* Espacio entre las cajas, tanto horizontal como vertical */
-    max-width: 1200px; /* Ancho máximo para el contenedor de las cajas (ajusta si es necesario) */
-    margin: 0 auto; /* Centra el contenedor completo en la página */
-    padding: 0 1rem; /* Pequeño padding a los lados para pantallas muy pequeñas */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-/* ESTILO CLAVE PARA CADA CAJA DE SERVICIO */
-/* ¡CORRECCIÓN EN EL SELECTOR! Ahora es '.services-container .services-box' */
-.services-container .services-box {
-    flex: 1 1 30rem; /* Define la flexibilidad y el tamaño base de cada caja */
-    background: var(--second-bg-color); /* ¡Este es tu fondo sombreado! */
-    padding: 3rem 2rem 4rem; /* Espaciado interno de la caja */
-    border-radius: 2rem; /* Bordes redondeados */
-    text-align: center; /* Centra el contenido (íconos, títulos, párrafos) */
-    border: .2rem solid var(--bg-color); /* Borde sutil */
-    transition: all 0.5s ease; /* Transición para efectos hover */
+.services-box {
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem; /* Ajusta el padding para que se vea mejor */
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: all 0.5s ease;
 }
 
-/* --- Estilos para los elementos DENTRO de las cajas de servicio --- */
-/* Estos son los que hacen que los íconos, texto y botón se vean bien dentro de la caja */
-
-.services-box i { /* Estilo para los íconos (ej: bx bx-code-alt) */
-    font-size: 5rem; /* Tamaño del ícono */
-    color: var(--main-color); /* Color del ícono */
-    margin-bottom: 1.5rem; /* Espacio debajo del ícono */
-    display: block; /* Necesario para que margin-bottom funcione correctamente */
+/* Estilo para el ícono */
+.services-box i {
+    font-size: 5rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    display: block;
 }
 
-.services-box h3 { /* Estilo para los títulos (Frontend, Graphic Design) */
-    font-size: 2.5rem;
+/* Estilo para las imágenes de certificaciones */
+.services-box img.certification-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    background-color: var(--bg-color);
+    border-radius: 0.5rem;
     margin-bottom: 1rem;
-    color: var(--text-color); /* Color del título */
+    box-shadow: 0 0 0.8rem var(--main-color);
+    transition: transform 0.5s ease;
 }
 
-.services-box p { /* Estilo para los párrafos de descripción */
+/* Estilo para el título */
+.services-box h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    animation: color-change 5s infinite;
+}
+/* Estilo para la descripción */
+.services-box p {
     font-size: 1.6rem;
     line-height: 1.5;
-    color: var(--text-color); /* Color del texto del párrafo */
-    margin-bottom: 2rem; /* Espacio antes del botón */
+    color: var(--text-color);
+    margin-top: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.services-box .btn { /* Estilo para el botón "Read More" */
+/* Muestra la descripción al pasar el mouse por encima de la tarjeta */
+.services-box:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+
+.services-box .btn {
     display: inline-block;
     padding: 1rem 2rem;
     background: var(--main-color);
@@ -266,7 +274,7 @@ span{
     border-radius: .8rem;
     font-weight: 600;
     transition: background 0.3s ease, color 0.3s ease;
-    text-decoration: none; /* Quita el subrayado del enlace */
+    text-decoration: none;
 }
 
 .services-box .btn:hover {
@@ -275,82 +283,140 @@ span{
     box-shadow: 0 0 1rem var(--main-color);
 }
 
-/* Efecto hover opcional para la caja de servicio completa */
-.services-container .services-box:hover {
+.services-box:hover {
     border-color: var(--main-color);
-    transform: translateY(-1rem); /* La caja se "levanta" un poco */
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.4);
-}
-/* Sección del portafolio */
-.portfolio {
-    background: var(--second-bg-color); /* Fondo oscuro de la sección */
-    padding: 7rem 0; /* Espaciado interno superior e inferior */
+    transform: translateY(-1rem);
+    box-shadow: 0 0 2rem var(--main-color);
 }
 
-/* Título de la sección */
+.services-box:hover .certification-img {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+/* Estilos de la etiqueta p (párrafo) - Ahora siempre visible */
+.services-box p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin-top: 1rem; /* Espacio entre el título y el párrafo */
+}
+/* --- Sección del portafolio --- */
+
+.recognition-box{
+
+    background: var(--bg-color);
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    text-align:center;
+    border: .2rem solid var(--bg-color);
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+
+}
+
+.recognition-box:hover{
+    border-color: var(--main-colore);
+    transform: translateY(-1rem);
+    box-shadow: 0 0 2rem var(--main-color);
+
+}
+.recognition-box .recognition-content{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+}
+.recognition-box .recognition-content h3{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    animation: color-change 5s infinite;
+}
+
+.recognition-box .recognition-content p{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    animation: color-change 5s infinite;
+
+
+}
+
+
+
+
+
+
+/* --- Sección del portafolio --- */
+.portfolio {
+    background: var(--second-bg-color);
+    padding: 7rem 0;
+}
+
 .portfolio .heading {
     text-align: center;
-    font-size: 4.5rem; /* Tamaño del título */
-    margin-bottom: 5rem; /* Margen debajo del título */
-    color: var(--text-color); /* Color del texto del título */
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+    color: var(--text-color);
 }
 
 .portfolio .heading span {
-    color: var(--main-color); /* Color para la palabra "Project" */
+    color: var(--main-color);
 }
 
-/* Contenedor de la rejilla de proyectos */
 .portfolio-container {
     display: grid;
-    /* Para 2 columnas iguales y responsivas. En pantallas pequeñas, pasará a 1 columna. */
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-    /* Para 3 columnas como en tu CSS, se verán 3 en pantallas grandes */
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-    align-items: center; /* Centra verticalmente los elementos dentro de las celdas del grid */
-    gap: 2.5rem; /* Espacio entre las imágenes (celdas del grid) */
-    max-width: 1200px; /* Ancho máximo para el grid, ajusta si es necesario */
-    margin: 0 auto; /* Centra el contenedor de la rejilla en la página */
-    padding: 0 1rem; /* Pequeño padding lateral para pantallas pequeñas */
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-/* Cada caja de proyecto (donde está la imagen y el overlay) */
 .portfolio-container .portfolio-box {
     position: relative;
-    border-radius: 2rem; /* Bordes redondeados para toda la caja */
-    box-shadow: 0 0 1rem var(--bg-color); /* Sombra para darle profundidad */
-    overflow: hidden; /* Importante para que el borde redondeado funcione con la imagen y el layer */
-    display: flex; /* Utilizado para el contenido de la caja si se necesita flex, pero para la imagen sola no es tan crítico aquí */
-    /* Puedes ajustar el aspect-ratio para mantener una proporción de imagen consistente */
-    aspect-ratio: 16 / 9; /* Ejemplo: Mantiene una proporción 16:9, ajusta si tus fotos tienen otra proporción */
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    aspect-ratio: 16 / 9;
 }
 
-/* Estilo para la imagen dentro de la caja */
 .portfolio-box img {
-    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
-    height: 100%; /* La imagen ocupa toda la altura de su contenedor */
-    object-fit: cover; /* ¡CLAVE! Escala la imagen para cubrir el área del contenedor sin distorsionarse, recortando si es necesario */
-    transition: 0.5s ease; /* Transición para el efecto zoom al pasar el ratón */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
 }
 
-/* Estilo para la capa de overlay que aparece al pasar el ratón */
 .portfolio-box .portfolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Cubre toda la caja */
-    background: linear-gradient(rgba(0,0,0,0.7), var(--main-color)); /* Gradiente oscuro a tu color principal */
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Apila el contenido verticalmente */
+    flex-direction: column;
     text-align: center;
-    padding: 0 1rem; /* Padding interno */
-    transform: translateY(100%); /* Oculto inicialmente, fuera de la vista */
-    transition: 0.5s ease; /* Transición para que aparezca suavemente */
+    padding: 0 1rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
 }
 
-/* Estilos para el contenido dentro del overlay */
 .portfolio-layer h4 {
     font-size: 3rem;
     color: var(--text-color);
@@ -369,92 +435,119 @@ span{
     align-items: center;
     width: 5rem;
     height: 5rem;
-    background: var(--text-color); /* Fondo del icono de enlace */
-    border-radius: 50%; /* Icono de enlace redondo */
-    color: var(--main-color); /* Color del icono */
+    background: var(--text-color);
+    border-radius: 50%;
+    color: var(--main-color);
     font-size: 2rem;
     text-decoration: none;
 }
 
-/* Efecto al pasar el ratón sobre la caja de proyecto */
 .portfolio-box:hover img {
-    transform: scale(1.1); /* Zoom a la imagen */
+    transform: scale(1.1);
 }
 
 .portfolio-box:hover .portfolio-layer {
-    transform: translateY(0); /* Hace que el overlay aparezca */
+    transform: translateY(0);
 }
 
-/* --- Media Queries para Responsividad (Opcional pero recomendado) --- */
-
-@media (max-width: 991px) {
-    .portfolio-container {
-        grid-template-columns: repeat(2, 1fr); /* En pantallas medianas, 2 columnas */
-    }
+/* --- CONTACTO --- */
+.contact {
+    min-height: auto;
+    padding: 7rem 9% 2rem;
 }
 
-@media (max-width: 768px) {
-    .portfolio-container {
-        grid-template-columns: 1fr; /* En pantallas pequeñas, 1 columna */
-    }
-    .portfolio .heading {
-        font-size: 3.5rem;
-    }
-    .portfolio-layer h4 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 450px) {
-    .portfolio .heading {
-        font-size: 3rem;
-    }
-}
-
-
-.contact h2{
+.contact h2 {
     margin-bottom: 3rem;
-
 }
 
-.contact form{
+.contact form {
     max-width: 70rem;
-    margin: 1rem auto;
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 3rem;
 }
 
-.contact form .input-box{
+.contact form .input-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 1.5rem;
 }
 
 .contact form .input-box input,
-.contact form textarea{
+.contact form textarea {
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
     background: var(--second-bg-color);
     border-radius: .8rem;
-    margin: .7rem 0;
+    margin: 0.7rem 0;
 }
 
-.contact form .input-box input{
-    width:49%;
+.contact form .input-box input {
+    width: 49%;
 }
 
-.contact form textarea{
-    resize:none;
+.contact form textarea {
+    resize: none;
 }
 
-.contact form .btn{
+.contact form .btn {
     margin-top: 2rem;
     cursor: pointer;
 }
 
-.footer{
+
+
+/*=== Estilo del Botón de Idioma (Responsivo) ===*/
+.language-toggle-btn {
+    /* Estilos base */
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    z-index: 1001; /* Asegura que esté por encima de la barra de navegación */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: var(--main-color);
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 1rem var(--main-color);
+    border: 4px solid var(--text-color);
+}
+
+/* Efecto al pasar el mouse */
+.language-toggle-btn:hover {
+    background: var(--second-bg-color);
+    color: var(--main-color);
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: 0 0 2rem var(--main-color);
+    border-color: var(--main-color);
+}
+
+/* Reglas responsivas para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .language-toggle-btn {
+        top: auto; /* Desactiva la posición superior */
+        bottom: 2rem; /* Lo mueve a la parte inferior */
+        right: 2rem;
+        padding: 0.8rem 1.5rem; /* Reduce el tamaño */
+        font-size: 1.4rem;
+        box-shadow: 0 0 0.8rem var(--main-color);
+    }
+}
+
+
+
+
+
+/* --- FOOTER --- */
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -463,180 +556,333 @@ span{
     background: var(--second-bg-color);
 }
 
-.footer-text p{
+.footer-text p {
     font-size: 1.6rem;
 }
-.footer-iconTop a{
-    display: infline-flex;
-    justify-content:center;
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
     padding: .8rem;
     background: var(--main-color);
     border-radius: .8rem;
-    transition: .5s ease; 
-
+    transition: .5s ease;
 }
 
-.footer-iconTop a:hover{
+.footer-iconTop a:hover {
     box-shadow: 0 0 1rem var(--main-color);
-
 }
 
 .footer-iconTop a i {
     font-size: 2.4rem;
     color: var(--second-bg-color);
-
 }
 
-.header.sticky{
+.header.sticky {
     border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
+.lighbox-modal {
 
-/* BREALPÖINTS */
-@media (max-width: 1200px){
-    html{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    z-index:1000;
+    opacity:0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+
+
+}
+
+.lightbox-moda.active{
+
+    opacity: 1;
+    visibility: visible;
+
+}
+.lighbox-image{
+
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+
+}
+.lightbox-modal.active .lightbox-image{
+    transform: scale(1);
+
+}
+
+.close-btn{
+
+
+    position:absolute;
+    top: 2rem;
+    right: 3rem;
+    color: #fff;
+    font-size: 5rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition: color 0.3s ease;
+    
+}
+
+
+.close-btn:hover{
+    color:var(--main-color);
+}
+
+
+.home-content h3{
+font-size: 3.2rem;
+font-weight: 700;
+
+}
+.home_content h3:nth-of-type(2){
+
+    margin-bottom: 2rem;
+
+
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+
+}
+.home-content h3 span,
+.home-content h1 span{
+    color: var(--main-color);
+}
+
+
+.home-media a {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.5s ease;
+
+}
+
+.social-emdoia a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+
+}
+
+/*==================== Estilo de la Sección de Curriculums ====================*/
+/* Estilos para las imágenes de currículum (se adaptan al contenedor) */
+.curriculum-img-es, .curriculum-img-en {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre la caja del currículum */
+.services-box:hover .curriculum-img-es, 
+.services-box:hover .curriculum-img-en {
+    transform: scale(1.05); /* Ligeramente más grande */
+}
+
+/* Estilos para el texto dentro de la sección de currículum */
+/* (Opcional: Si quieres diferenciar el texto de esta sección) */
+#curriculum .services-box h3 {
+    color: var(--main-color);
+    font-size: 2.2rem;
+}
+
+#curriculum .services-box p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+
+/* --- Media Queries --- */
+@media (max-width: 1200px) {
+    html {
         font-size: 55%;
-
     }
 }
 
-@media (max-width: 991px){
-    .header{
+@media (max-width: 991px) {
+    .header {
         padding: 2rem 3%;
-
     }
-    section{
+
+    section {
         padding: 10rem 3% 2rem;
     }
 
-    .service{
-        padding-bottom: 7rem;
-
-        
-    }
-
-    .portfolio{
+    .services,
+    .portfolio,
+    .contact {
         padding-bottom: 7rem;
     }
-    .contact{
-        min-height: auto;
-    }
-    .footer{
 
+    .footer {
         padding: 2rem;
-
-
     }
 }
 
-@media (max-width: 768px){
-     #menu-icon{
+@media (max-width: 768px) {
+    #menu-icon {
         display: block;
-     }
-     .navbar{
+    }
+
+    .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         padding: 1rem 3%;
         background: var(--bg-color);
-        border-top: .1rem solid rgba(0,0,0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
-        display:none
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
     }
-    .navbar.active{
+
+    .navbar.active {
         display: block;
     }
 
-    .navbar a{
+    .navbar a {
         display: block;
-        font-size:2rem; 
+        font-size: 2rem;
         margin: 3rem 0;
     }
-    .home{
-        flex-direction:column;
-        
+
+    .home {
+        flex-direction: column;
     }
 
-    .home-content h3{
+    .home-content h3 {
         font-size: 2.6rem;
     }
 
-    .home-content h1{
-        font-size: 5rem; 
+    .home-content h1 {
+        font-size: 5rem;
     }
-    .home-img img{
+
+    .home-img img {
         width: 70vw;
         margin-top: 4rem;
     }
-    .about{
+
+    .about {
         flex-direction: column-reverse;
     }
-    .about img{
+
+    .about img {
         width: 70vw;
         margin-top: 4rem;
     }
 
-    .services h2{
+    .services h2,
+    .portfolio h2 {
         margin-bottom: 3rem;
     }
 
-
-    .portfolio h2{
-        margin-bottom: 3rem;
-    }
-    .portfolio-container{
+    .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    @media(max-width: 617px){
-        .portfolio-container{
+
+    .contact form .input-box {
+        flex-direction: column;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+
+    .services-box img.certification-img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    @media(max-width: 617px) {
+        .portfolio-container {
             grid-template-columns: 1fr;
         }
     }
-    @media(max-width: 450px){
-        html{
+
+    @media(max-width: 450px) {
+        html {
             font-size: 50%;
         }
-        
-        .contact form .input-box input{
-            width: 100%;
-        }
-
-    
     }
-    @media(max-width: 365px){
-        .home-img img{
+
+    @media(max-width: 365px) {
+        .home-img img {
             width: 90vw;
             animation: floatImage 4s ease-in-out infinite;
         }
-        
-        @keyframes floatImage{
-            0%{
+
+        @keyframes floatImage {
+            0% {
                 transform: translateY(0);
             }
-            50%{
+
+            50% {
                 transform: translateY(-2.4rem);
             }
-            100%{
+
+            100% {
                 transform: translateY(0);
             }
-
         }
 
-
-        .about-img img{
+        .about-img img {
             width: 90vw;
         }
-    
-        .footer{
-            flex-direction:column-reverse;
+
+        .footer {
+            flex-direction: column-reverse;
         }
-        .footer p{
-            text-align:center;
+
+        .footer p {
+            text-align: center;
             margin-top: 2rem;
         }
     }
-
-
+}
+/* Keyframes para la animación de cambio de color */
+@keyframes color-change {
+   
+    100% {
+        color: var(--main-color);
+    }
 }
 
+
+@media(max-width: 768px){
+    .language-toggle-btn{
+        top:auto;/* deshabilita la posicion superior*/
+        bottom: 2rem;
+        right: 2rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1.4rem;
+        box-shadow: 0 0 0.8rem var(--main-color);
+
+
+    }
+}
