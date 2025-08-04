@@ -138,13 +138,120 @@ span {
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
 }
+/* Media query para pantallas más pequeñas (teléfonos móviles) */
+@media (max-width: 768px) {
+    
+    /* Adaptación de la sección "Acerca de Mí" */
+    .about-img img {
+        /* Reduce el tamaño de la sombra y la separación */
+        box-shadow: 0 0 1.5rem var(--main-color);
+        margin: 0; /* Asegura que no haya márgenes no deseados */
+    }
 
+    /* Adaptación de los contenedores de servicios */
+    .services-container .services-box {
+        /* Reduce la sombra en los boxes de servicios */
+        box-shadow: 0 0 1rem var(--main-color);
+    }
+}
+
+
+/* Estilos para la sección 'Acerca de Mí' (versión de escritorio) */
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2rem; /* Espacio entre la imagen y el texto */
     background: var(--second-bg-color);
+
+    /* --- ESTOS SON LOS CAMBIOS PARA CENTRAR EL BLOQUE --- */
+    max-width: 1200px; /* Limita el ancho del contenido */
+    margin: 0 auto; /* Centra el bloque horizontalmente */
+    padding: 5rem 9%; /* Añade padding para móviles sin desbordar */
+}
+
+.about-img {
+    width: 35vw; /* Ancho de la imagen para la versión de escritorio */
+    height: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    /*border: .2rem solid var(--main-color);*/
+    box-shadow: 0 0 1rem var(--main-color);
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.1);
+}
+
+.about-content {
+    flex: 1; /* Permite que el contenido ocupe el espacio restante */
+}
+
+/* ---------------------------------------------------- */
+/* Media Query para la sección 'Acerca de Mí' en Móviles */
+/* ---------------------------------------------------- */
+
+@media (max-width: 768px) {
+    /* ... otros estilos responsivos ... */
+
+    .about {
+        flex-direction: column-reverse; /* Cambia el orden: texto arriba, imagen abajo */
+        text-align: center;
+        padding-top: 5rem;
+    }
+
+    .about-img {
+        width: 60vw; /* Reduce el ancho de la imagen */
+        height: 60vw;
+        margin-bottom: 2rem;
+    }
+    
+    .about-content h2 {
+        font-size: 3.5rem;
+    }
+    
+    .about-content h3 {
+        font-size: 2.5rem;
+    }
+    
+    .about-content p {
+        font-size: 1.6rem;
+    }
+    
+    /* ... otros estilos responsivos ... */
+}
+
+/* Media Query para teléfonos muy pequeños */
+@media (max-width: 450px) {
+    /* ... otros estilos responsivos ... */
+    
+    .about-img {
+        width: 75vw; /* Reduce aún más el ancho de la imagen */
+        height: 75vw;
+    }
+    
+    .about-content h2 {
+        font-size: 3rem;
+    }
+    
+    .about-content h3 {
+        font-size: 2rem;
+    }
+    
+    /* ... otros estilos responsivos ... */
 }
 
 .contenedor-foto {
