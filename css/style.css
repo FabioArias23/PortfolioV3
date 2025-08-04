@@ -180,7 +180,7 @@ span {
     overflow: hidden;
     position: relative;
     /*border: .2rem solid var(--main-color);*/
-    box-shadow: 0 0 1rem var(--main-color);
+   /* box-shadow: 0 0 1rem var(--main-color);*/
     animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -200,10 +200,48 @@ span {
     flex: 1; /* Permite que el contenido ocupe el espacio restante */
 }
 
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 9%;
+}
 /* ---------------------------------------------------- */
 /* Media Query para la sección 'Acerca de Mí' en Móviles */
 /* ---------------------------------------------------- */
+@media (max-width: 1199px) {
+    .about-container {
+        padding: 5rem 5%;
+        gap: 1.5rem;
+    }
+}
 
+
+
+
+@media (max-width: 991px) {
+    .about-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 5rem 3%;
+        gap: 1.5rem;
+    }
+    .about-img {
+        width: 50vw;
+        height: 50vw;
+        margin-top: 2rem;
+    }
+    .about-content h2 {
+        font-size: 3.2rem;
+        text-align: center;
+    }
+    .about-content h3 {
+        font-size: 2.2rem;
+    }
+}
 @media (max-width: 768px) {
     /* ... otros estilos responsivos ... */
 
@@ -238,6 +276,10 @@ span {
 @media (max-width: 450px) {
     /* ... otros estilos responsivos ... */
     
+     .about-container {
+        padding: 5rem 2%;
+        gap: 1rem;
+     }
     .about-img {
         width: 75vw; /* Reduce aún más el ancho de la imagen */
         height: 75vw;
@@ -254,13 +296,38 @@ span {
     /* ... otros estilos responsivos ... */
 }
 
+/* Para pantallas de hasta 300px (móviles extremadamente pequeños) */
+@media (max-width: 300px) {
+      html {
+        font-size: 35%; /* Reduce aún más el tamaño base de la fuente */
+    }
+    .about-container {
+        padding: 4rem 1%;
+        gap: 0.5rem;
+    }
+    .about-img {
+        width: 90vw;
+        height: 90vw;
+    }
+    .about-content h2 {
+        font-size: 2.2rem;
+    }
+    .about-content h3 {
+        font-size: 1.6rem;
+    }
+    .about-content p {
+        font-size: 1.4rem;
+    }
+}
+
+
 .contenedor-foto {
-    width: 450px;
-    height: 450px;
+    width: 35vw; /* Usa vw para que el ancho sea proporcional a la pantalla */
+    height: 35vw; /* Usa vw para que la altura sea proporcional a la pantalla */
     border-radius: 50%;
     overflow: hidden;
-    margin: 20px auto;
-    border: 1px solid #ddd;
+    margin: 2rem auto; /* Añade un margin para centrarlo y darle espacio */
+    border: 1px solid var(--main-color); /* Estilo de borde mejorado */
 }
 
 .about-img img,
