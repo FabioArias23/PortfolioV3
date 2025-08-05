@@ -50,7 +50,7 @@ sr.reveal('.home-content p, .about-content', { origin: 'right', delay: 600 });
 
 /*==================== typed js ====================*/
 const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Backend Developer', 'Instructor', 'Development'],
+    strings: ['Frontend Developer', 'Backend Developer', 'Instructor', 'Full-stack developer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
