@@ -528,9 +528,248 @@ span {
 }
 
 
+/* --- NUEVA SECCIÓN CERTIFICACIONES CARRUSEL --- */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.slider-track {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 2rem 1rem;
+    scrollbar-width: none; /* Oculta scroll en Firefox */
+}
 
+.slider-track::-webkit-scrollbar {
+    display: none; /* Oculta scroll en Chrome/Safari */
+}
 
+.cert-card {
+    flex: 0 0 calc(33.33% - 1.4rem); /* 3 cards en PC */
+    min-width: 280px;
+    background: var(--second-bg-color);
+    border-radius: 2rem;
+    padding: 2rem;
+    scroll-snap-align: center;
+    transition: 0.4s ease;
+    text-align: center;
+}
+
+/* Efectos Neón según data-color */
+.cert-card[data-color="blue"] { border: 2px solid #00eeff; box-shadow: 0 0 1.5rem rgba(0, 238, 255, 0.3); }
+.cert-card[data-color="green"] { border: 2px solid #0ef09b; box-shadow: 0 0 1.5rem rgba(14, 240, 155, 0.3); }
+.cert-card[data-color="orange"] { border: 2px solid #ff4d00; box-shadow: 0 0 1.5rem rgba(255, 77, 0, 0.3); }
+
+.cert-card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 0 2.5rem var(--main-color);
+}
+
+.cert-img-box img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cert-card h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+/* Botones Navegación */
+/* --- FLECHAS DE NAVEGACIÓN (MÁS GRANDES) --- */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    border: none;
+    
+    /* Aumentamos el círculo de 5rem a 6.5rem */
+    width: 6.5rem; 
+    height: 6.5rem; 
+    
+    border-radius: 50%;
+    
+    /* Aumentamos el icono de 3rem a 4rem */
+    font-size: 4rem; 
+    
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 2rem var(--main-color); /* Sombra un poco más intensa */
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Ajuste de posición lateral para que no tapen la imagen al ser más grandes */
+.nav-btn.prev {
+    left: -3.2rem; /* Mitad del nuevo tamaño (6.5 / 2) */
+}
+
+.nav-btn.next {
+    right: -3.2rem;
+}
+
+.nav-btn:hover {
+    background: var(--text-color);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 3rem var(--main-color);
+}
+
+/* --- CARRUSEL TECNOLOGÍAS --- */
+/* --- ESTILOS CARRUSEL TECNOLOGÍAS --- */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+#techSlider {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 3rem 1rem;
+    scrollbar-width: none;
+}
+
+#techSlider::-webkit-scrollbar {
+    display: none;
+}
+
+.tech-card {
+    flex: 0 0 calc(25% - 1.5rem); /* 4 tecnologías por fila en PC */
+    min-width: 250px;
+    background: var(--second-bg-color);
+    border-radius: 2.5rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    scroll-snap-align: center;
+    border: 2px solid transparent;
+    transition: 0.4s ease;
+}
+
+.tech-card i {
+    font-size: 6rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.tech-card h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.tech-card p {
+    font-size: 1.4rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Efectos Neón */
+.tech-card[data-color="orange"] { border-color: #ff4d00; box-shadow: 0 0 1rem rgba(255, 77, 0, 0.2); }
+.tech-card[data-color="blue"] { border-color: #00eeff; box-shadow: 0 0 1rem rgba(0, 238, 255, 0.2); }
+.tech-card[data-color="green"] { border-color: #0ef09b; box-shadow: 0 0 1rem rgba(14, 240, 155, 0.2); }
+
+.tech-card:hover {
+    transform: translateY(-1rem);
+    border-color: var(--main-color);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+/* --- FLECHAS GRANDES EN LOS BORDES --- */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    border: none;
+    width: 6.5rem;   /* Tamaño grande solicitado */
+    height: 6.5rem;
+    border-radius: 50%;
+    font-size: 4rem; /* Icono grande solicitado */
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 2rem var(--main-color);
+    transition: 0.3s;
+}
+
+.nav-btn.prev {
+    left: -3.2rem; /* Posicionada al borde izquierdo */
+}
+
+.nav-btn.next {
+    right: -3.2rem; /* Posicionada al borde derecho */
+}
+
+.nav-btn:hover {
+    background: var(--text-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 1250px) {
+    .nav-btn.prev { left: 0.5rem; }
+    .nav-btn.next { right: 0.5rem; }
+}
+
+@media (max-width: 991px) {
+    .tech-card { flex: 0 0 calc(50% - 1rem); }
+}
+
+@media (max-width: 617px) {
+    .tech-card { flex: 0 0 100%; }
+    .nav-btn { width: 5rem; height: 5rem; font-size: 3rem; }
+}
+/* Responsive para Tecnologías */
+@media (max-width: 1100px) {
+    .tech-card { flex: 0 0 calc(50% - 1.5rem); } /* 2 elementos */
+}
+
+@media (max-width: 768px) {
+    .tech-card { flex: 0 0 100%; } /* 1 elemento */
+}
+
+/* --- AJUSTE RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 768px) {
+    .nav-btn {
+        /* En celulares las bajamos un poco de tamaño para que no estorben */
+        width: 5rem;
+        height: 5rem;
+        font-size: 3rem;
+    }
+    
+    .nav-btn.prev { left: 0.5rem; }
+    .nav-btn.next { right: 0.5rem; }
+}
+
+#recognitions .certification-img {
+    width: 100%;
+    height: 200px; /* Altura fija para mantener simetría */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin estirarse */
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
 
 /* --- Sección del portafolio --- */
 .portfolio {
