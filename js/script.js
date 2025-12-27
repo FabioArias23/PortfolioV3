@@ -503,3 +503,67 @@ if (recSlider && nextRec && prevRec) {
     nextRec.addEventListener('click', () => moveRec('next'));
     prevRec.addEventListener('click', () => moveRec('prev'));
 }
+
+/*==================== LIGHTBOX LOGIC (Visor de Imágenes) ====================*/
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('lightboxModal');
+    const modalImg = modal.querySelector('.lightbox-image');
+    const modalCaption = modal.querySelector('.lightbox-caption');
+    const closeBtn = modal.querySelector('.lightbox-close');
+
+    // Seleccionamos todas las imágenes que queremos abrir
+    // Incluimos las de certificaciones, reconocimientos y la foto de perfil si quieres
+    const images = document.querySelectorAll('.cert-card img, .services-box img, .certification-img, .about-img img');
+
+    // Función para abrir
+    const openModal = (img) => {
+        modal.classList.add('active');
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        
+        // Usamos el texto ALT como descripción
+        modalCaption.textContent = img.alt;
+        
+        document.body.classList.add('no-scroll'); // Bloquear scroll
+        modal.setAttribute('aria-hidden', 'false');
+    };
+
+    // Función para cerrar
+    const closeModal = () => {
+        modal.classList.remove('active');
+        document.body.classList.remove('no-scroll'); // Activar scroll
+        modal.setAttribute('aria-hidden', 'true');
+        
+        // Limpiar src después de la animación para evitar parpadeos
+        setTimeout(() => {
+            modalImg.src = '';
+            modalCaption.textContent = '';
+        }, 300);
+    };
+
+    // Eventos Click en las imágenes
+    images.forEach(img => {
+        img.style.cursor = 'zoom-in'; // Cambiar cursor para indicar acción
+        img.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evitar conflictos con el carrusel
+            openModal(e.target);
+        });
+    });
+
+    // Evento Click en botón cerrar
+    closeBtn.addEventListener('click', closeModal);
+
+    // Evento Click fuera de la imagen (Overlay)
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.classList.contains('lightbox-content')) {
+            closeModal();
+        }
+    });
+
+    // Evento Tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+});
