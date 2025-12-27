@@ -1,0 +1,3 @@
+# --- Repomix ---
+# Ignorar el archivo de salida por defecto (cualquier extensión)
+repomix-output.*

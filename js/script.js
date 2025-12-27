@@ -63,6 +63,9 @@ const typed = new Typed('.multiple-text', {
 document.addEventListener('DOMContentLoaded', () => {
     const translations = {
         es: {
+             cert_utn_title: "Tecnicatura Universitaria en Programación",
+        cert_utn_description: "Título académico de la Universidad Tecnológica Nacional (UTN), especializado en el diseño, desarrollo y mantenimiento de sistemas de software.",
+        cert_utn_alt: "Certificado de la Tecnicatura Universitaria en Programación - UTN", // Texto ALT en Español
             page_title: "Portafolio Personal | Fabio Arias",
             nav_home: "Inicio",
             nav_about: "Acerca de Mí",
@@ -219,6 +222,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         },
         en: {
+              cert_utn_title: "University Degree in Programming",
+        cert_utn_description: "Academic degree from the National Technological University (UTN), specialized in the design, development, and maintenance of software systems.",
+        cert_utn_alt: "UTN University Programming Degree Certificate", // Texto ALT en Inglés
             page_title: "Personal Portfolio | Fabio Arias",
             nav_home: "Home",
             nav_about: "About",
