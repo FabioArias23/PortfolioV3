@@ -83,10 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
             home_developer_role: "Desarrollador FullStack",
             home_description: "Manejo diferentes tecnologías, con alto nivel técnico.",
             download_cv: "Descargar CV",
+            download_cv_es: "CV Español",
+            download_cv_en: "CV English",
             about_heading: "Acerca de",
             about_heading_span: "Mí",
             about_role: "Desarrollador Full-Stack",
-            about_description: "Soy un desarrollador Full-Stack con experiencia en la creación de aplicaciones web robustas y escalables. Me especializo en tecnologías Angular y Vue.js para construir interfaces de usuario intuitivas y en backend tecnologías como Node.js y Laravel para diseñar APIs eficientes y seguras. Mi objetivo es combinar mi pasión por el código con la resolución de problemas para entregar soluciones de alto rendimiento.",
+            about_description: "Desarrollador Full Stack con más de 5 años de experiencia en desarrollo de software, especializado en arquitecturas escalables, microservicios y tecnologías cloud. Experto en ecosistemas JavaScript/TypeScript (Node.js, React, Angular) y PHP (Laravel), con sólida experiencia en Python para IA/ML y microservicios. Tutor experimentado liderando más de 20 comisiones de estudiantes en programas intensivos de desarrollo web, combinando expertise técnico con habilidades pedagógicas excepcionales. Destacada participación en hackathons desarrollando soluciones innovadoras con IA (RAG, reconocimiento facial, LLMs) y servicios Azure. Tecnicatura Universitaria finalizada con TFI en sistema de gestión de capacitaciones. Capacidad demostrada para diseñar y desarrollar aplicaciones complejas desde cero en 24-48 horas bajo alta presión, trabajando efectivamente en equipos multidisciplinarios y entornos ágiles.",
             services_heading: "Nuestros",
             services_heading_span: "Servicios",
             service_frontend_title: "Frontend",
@@ -195,13 +197,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
             project_tesloshop_backend_title: "Aplicacion de TesloShop Backend",
             project_tesloshop_backend_description: "Construccion de un Backend RESTful API para un e-commerce. Utiliza tecnologias de vanguardia para garantizar  escalabilidad, seguridad y una gestion eficiente de datos de productos, usuarios y transacciones.",
-
-            project_superflight_tittle:"Aplicacion de SuperFlight",
+project_microservices_title: "Aplicación con MicroServicios AWS/Docker",
+        project_microservices_description: "Sistema distribuido de gestión aeroportuaria basado en microservicios con NestJS, RabbitMQ y Docker, bajo arquitectura hexagonal.",
+            
+project_superflight_tittle:"Aplicacion de SuperFlight",
             project_superflight_description: " API de reserva de vuelos desarrollada con  NestJS y MongoDB. Un proyecto que resalta el dominio  de un framework robusto, arquitectura modular y uso de bases de datos NoSQL para una gestion de datos flexible y eficiente.",
 
             project_workshop_mgmt_title: "Aplicacion Gestion de Talleres",
             project_workshop_mgmt_description: "API backend desarrollada en PHP para gestionar la operacion de talleres. Demuestra competencias en el desarrollo de APIs tradicionales y manejo de logica de negocio y gestion de bases de datos relacionales para CRUD completo",
-
+            project_aacop_title: "Sistema de Gestión AACOP (UTN)",
+            project_aacop_description: "Sistema de gestión integral desarrollado con Laravel 12, Livewire 3 y TailwindCSS. Incluye gestión de roles, asistencia, emisión automática de certificados y métricas en tiempo real.",
+            
+            project_neurodesk_title: "Microsoft AI: Proyecto NeuroDesk",
+            project_neurodesk_description: "Sistema inmunológico organizacional impulsado por Azure AI. Arquitectura Backend Cloud-native, orquestación de agentes (GPT-4, Semantic Kernel) y RAG para automatización empresarial.",
+            
+            project_nexo_title: "Nexo Emprendedores (Hackathon)",
+            project_nexo_description: "Ecosistema digital desarrollado en 24hs. Arquitectura de microservicios (Laravel + Python/FastAPI), autenticación biométrica y asistente IA con RAG.",
 
 
             curriculum_heading:"Mis",
@@ -222,9 +233,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         },
         en: {
-              cert_utn_title: "University Degree in Programming",
-        cert_utn_description: "Academic degree from the National Technological University (UTN), specialized in the design, development, and maintenance of software systems.",
-        cert_utn_alt: "UTN University Programming Degree Certificate", // Texto ALT en Inglés
+            cert_utn_title: "University Degree in Programming",
+            cert_utn_description: "Academic degree from the National Technological University (UTN), specialized in the design, development, and maintenance of software systems.",
+            cert_utn_alt: "UTN University Programming Degree Certificate", // Texto ALT en Inglés
             page_title: "Personal Portfolio | Fabio Arias",
             nav_home: "Home",
             nav_about: "About",
@@ -242,11 +253,13 @@ document.addEventListener('DOMContentLoaded', () => {
             home_developer_role: "FullStack Developer",
             home_description: "I have a high technical level in various technologies.",
             download_cv: "Download CV",
+            download_cv_es: "Spanish CV",
+            download_cv_en: "English CV",
+
             about_heading: "About",
             about_heading_span: "Me",
             about_role: "Full-Stack Developer",
-            about_description: "I am a Full-Stack developer with experience in creating robust and scalable web applications. I specialize in Angular and Vue.js technologies to build intuitive user interfaces and in backend technologies like Node.js and Laravel to design efficient and secure APIs. My goal is to combine my passion for code with problem-solving to deliver high-performance solutions.",
-            services_heading: "My",
+            about_description: "Full Stack Developer with 5+ years of experience in software development, specializing in scalable architectures, microservices, and cloud technologies. Expert in JavaScript/TypeScript (Node.js, React, Angular) and PHP (Laravel) ecosystems, with solid experience in Python for AI/ML and microservices. Experienced Lead Tutor for over 20 student cohorts in intensive web development programs, blending technical expertise with exceptional pedagogical skills. Notable hackathon participant developing innovative AI solutions (RAG, facial recognition, LLMs) and Azure services. University Associate Degree graduate with a final project in training management systems. Proven ability to design and develop complex applications from scratch within 24-48 hours under high pressure, working effectively in multidisciplinary teams and agile environments.",            services_heading: "My",
             services_heading_span: "Services",
             service_frontend_title: "Frontend",
             service_frontend_description: "I use Frameworks like Angular, Vue.js. I handle different template engines such as Handlebars, Pugs, Ejs. With JavaScript, I handle different template engines with PHP like Livewire.",
@@ -360,13 +373,19 @@ document.addEventListener('DOMContentLoaded', () => {
         project_superflight_title: "SuperFlight Application",
         project_superflight_description: "Flight booking API developed with NestJS and MongoDB. This project highlights proficiency in a robust framework, modular architecture, and the use of NoSQL databases for flexible and efficient data management.",
         
-        project_microservices_title: "Microservices Application with AWS/Docker",
-        project_microservices_description: "Deployment of a microservices architecture using Docker for containerization and AWS for cloud management. This project validates expertise in DevOps, scalability, and deployment in production environments.",
-        
+project_microservices_title: "Flight Airport Management Microservices System",        project_microservices_description: "Deployment of a microservices architecture using Docker for containerization and AWS for cloud management. This project validates expertise in DevOps, scalability, and deployment in production environments.",
+        project_microservices_description: "Distributed airport management system based on microservices with NestJS, RabbitMQ, and Docker, built under hexagonal architecture.",
         project_workshop_mgmt_title: "Workshop Management Application",
         project_workshop_mgmt_description: "Backend API developed in PHP to manage workshop operations. This demonstrates competence in traditional API development, business logic handling, and relational database management for full CRUD functionality.",
 
-
+            project_aacop_title: "AACOP Management System (UTN)",
+            project_aacop_description: "Comprehensive management system built with Laravel 12, Livewire 3, and TailwindCSS. Features role management, attendance tracking, automatic certificate issuance, and real-time metrics.",
+            
+            project_neurodesk_title: "Microsoft AI: NeuroDesk Project",
+            project_neurodesk_description: "Organizational immune system powered by Azure AI. Cloud-native Backend architecture, agent orchestration (GPT-4, Semantic Kernel), and RAG for enterprise automation.",
+            
+            project_nexo_title: "Nexo Entrepreneurs (Hackathon)",
+            project_nexo_description: "Digital ecosystem developed in 24hs. Microservices architecture (Laravel + Python/FastAPI), biometric authentication, and AI assistant with RAG.",
 
 
             curriculum_heading:"My",
@@ -502,68 +521,142 @@ if (recSlider && nextRec && prevRec) {
 
     nextRec.addEventListener('click', () => moveRec('next'));
     prevRec.addEventListener('click', () => moveRec('prev'));
-}
-
-/*==================== LIGHTBOX LOGIC (Visor de Imágenes) ====================*/
+}/*==================== LIGHTBOX LOGIC (Galería Completa con Navegación) ====================*/
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('lightboxModal');
+    if (!modal) return;
+
     const modalImg = modal.querySelector('.lightbox-image');
     const modalCaption = modal.querySelector('.lightbox-caption');
     const closeBtn = modal.querySelector('.lightbox-close');
+    const prevBtn = document.getElementById('lightboxPrev');
+    const nextBtn = document.getElementById('lightboxNext');
 
-    // Seleccionamos todas las imágenes que queremos abrir
-    // Incluimos las de certificaciones, reconocimientos y la foto de perfil si quieres
-    const images = document.querySelectorAll('.cert-card img, .services-box img, .certification-img, .about-img img');
+    // 1. RECOLECTAR TODAS LAS IMÁGENES DE LA GALERÍA
+    // El orden en que aparecen aquí será el orden de navegación
+    const selectors = [
+        '.portfolio-box img',    // Portafolio
+        '.cert-card img',        // Certificados
+        '.services-box img',     // Servicios/Varios
+        '.certification-img',    // Imágenes extra de certs
+        '.cv-slide',             // Curriculum
+        '.about-img img'         // Foto perfil (opcional)
+    ];
 
-    // Función para abrir
-    const openModal = (img) => {
-        modal.classList.add('active');
-        modalImg.src = img.src;
-        modalImg.alt = img.alt;
+    // Convertimos NodeList a Array para poder manejar índices fácilmente
+    let galleryImages = Array.from(document.querySelectorAll(selectors.join(', ')));
+    let currentIndex = 0;
+
+    // --- FUNCIONES CORE ---
+
+    // Actualizar la imagen del modal según el índice actual
+    const updateLightboxImage = () => {
+        const img = galleryImages[currentIndex];
         
-        // Usamos el texto ALT como descripción
-        modalCaption.textContent = img.alt;
+        // Animación de entrada suave (fade)
+        modalImg.style.opacity = 0;
         
-        document.body.classList.add('no-scroll'); // Bloquear scroll
-        modal.setAttribute('aria-hidden', 'false');
+        setTimeout(() => {
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modalCaption.textContent = img.alt || '';
+            modalImg.style.objectFit = 'contain'; 
+            modalImg.style.opacity = 1; // Restaurar opacidad
+        }, 200);
     };
 
-    // Función para cerrar
+    // Función para abrir el modal en un índice específico
+    const openModal = (index) => {
+        currentIndex = index;
+        modal.classList.add('active');
+        document.body.classList.add('no-scroll');
+        modal.setAttribute('aria-hidden', 'false');
+        updateLightboxImage();
+    };
+
     const closeModal = () => {
         modal.classList.remove('active');
-        document.body.classList.remove('no-scroll'); // Activar scroll
+        document.body.classList.remove('no-scroll');
         modal.setAttribute('aria-hidden', 'true');
-        
-        // Limpiar src después de la animación para evitar parpadeos
         setTimeout(() => {
-            modalImg.src = '';
-            modalCaption.textContent = '';
+            modalImg.src = ''; 
         }, 300);
     };
 
-    // Eventos Click en las imágenes
-    images.forEach(img => {
-        img.style.cursor = 'zoom-in'; // Cambiar cursor para indicar acción
+    // Navegación: Siguiente imagen
+    const showNext = (e) => {
+        if(e) e.stopPropagation();
+        currentIndex++;
+        // Si llegamos al final, volvemos al principio (Loop infinito)
+        if (currentIndex >= galleryImages.length) {
+            currentIndex = 0;
+        }
+        updateLightboxImage();
+    };
+
+    // Navegación: Imagen anterior
+    const showPrev = (e) => {
+        if(e) e.stopPropagation();
+        currentIndex--;
+        // Si estamos en el principio, vamos al final
+        if (currentIndex < 0) {
+            currentIndex = galleryImages.length - 1;
+        }
+        updateLightboxImage();
+    };
+
+    // --- EVENT LISTENERS PARA LAS IMÁGENES (Clic inteligente) ---
+    
+    let startX = 0;
+    let startY = 0;
+
+    galleryImages.forEach((img, index) => {
+        img.style.cursor = 'zoom-in';
+
+        // Detectar inicio de clic
+        img.addEventListener('mousedown', (e) => {
+            startX = e.clientX;
+            startY = e.clientY;
+        });
+
+        // Detectar fin de clic
         img.addEventListener('click', (e) => {
-            e.stopPropagation(); // Evitar conflictos con el carrusel
-            openModal(e.target);
+            // Calcular distancia movida
+            const moveX = Math.abs(e.clientX - startX);
+            const moveY = Math.abs(e.clientY - startY);
+
+            // Si se movió menos de 10px, es un CLIC. Si más, es ARRASTRE.
+            if (moveX < 10 && moveY < 10) {
+                e.preventDefault();
+                e.stopPropagation();
+                // IMPORTANTE: Pasamos el índice correcto
+                openModal(index);
+            }
         });
     });
 
-    // Evento Click en botón cerrar
-    closeBtn.addEventListener('click', closeModal);
+    // --- CONTROLES DEL MODAL ---
 
-    // Evento Click fuera de la imagen (Overlay)
+    // Botones de Flechas
+    if (nextBtn) nextBtn.addEventListener('click', showNext);
+    if (prevBtn) prevBtn.addEventListener('click', showPrev);
+    
+    // Botón Cerrar
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    // Clic fuera de la imagen (Overlay)
     modal.addEventListener('click', (e) => {
         if (e.target === modal || e.target.classList.contains('lightbox-content')) {
             closeModal();
         }
     });
 
-    // Evento Tecla ESC
+    // Navegación por TECLADO (Accesibilidad)
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
+        if (!modal.classList.contains('active')) return;
+
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
     });
 });

@@ -38,12 +38,13 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 1.5rem 5%; /* Reduje un poco el padding lateral para ganar espacio */
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: 0.3s;
 }
 
 .logo {
@@ -53,14 +54,22 @@ section {
     cursor: default;
 }
 
+/* Alineación de los enlaces */
+.navbar {
+    display: flex;
+    align-items: center; /* Centra verticalmente los items */
+    gap: 2rem; /* Espacio inteligente entre enlaces en vez de margin-left fijo */
+}
 .navbar a {
-    font-size: 1.7rem;
+    font-size: 1.6rem; /* Un pelín más pequeño para que quepa todo */
     color: var(--text-color);
-    margin-left: 4rem;
+    font-weight: 500;
     transition: .3s;
+    white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
 }
 
-.navbar a.hover,
+
+.navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
 }
@@ -107,6 +116,26 @@ span {
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
+}
+/* ==================== GRUPO DE BOTONES (CV) ==================== */
+.btn-group {
+    display: flex;
+    gap: 1.5rem; /* Espacio entre los botones */
+    margin-top: 2rem; /* Separación de los iconos sociales */
+}
+
+/* Ajuste para móviles: Si la pantalla es muy pequeña, uno abajo del otro */
+@media (max-width: 450px) {
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        width: 100%; /* Que ocupen todo el ancho en el celu */
+        text-align: center;
+        margin: 0; /* Reseteamos márgenes si los hubiera */
+    }
 }
 
 .btn:hover {
@@ -155,33 +184,66 @@ span {
     }
 }
 
+/* ==================== SECCIÓN ACERCA DE MÍ (VERSIÓN FINAL & LIMPIA) ==================== */
 
-/* Estilos para la sección 'Acerca de Mí' (versión de escritorio) */
+/* Contenedor principal de la sección */
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem; /* Espacio entre la imagen y el texto */
-     background: var(--second-bg-color);
-    border-radius: 2.5rem;
-    /* --- ESTOS SON LOS CAMBIOS PARA CENTRAR EL BLOQUE --- */
-    max-width: 1200px; /* Limita el ancho del contenido */
-    margin: 0 auto; /* Centra el bloque horizontalmente */
-    padding: 5rem 9%; /* Añade padding para móviles sin desbordar */
+    flex-direction: column;
+    background: var(--second-bg-color);
+    padding: 8rem 5% 4rem; /* Espaciado generoso */
+    min-height: 100vh;
 }
 
+/* Contenedor interno que agrupa Foto + Texto */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrado vertical */
+    gap: 4rem; /* Espacio entre foto y texto */
+    flex-wrap: wrap; /* MAGIA: Si no caben, se ponen uno debajo del otro automáticamente */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* --- ESTILOS DE LA FOTO (NEON PULSE) --- */
 .about-img {
-     width: 20vw; /* Cambiado a 20vw para que sea más pequeña */
-    height: 20vw; /* Asegúrate de que height sea igual a width */
+    /* Flexibilidad: base de 300px, puede crecer y encogerse */
+    flex: 1 1 300px; 
+    max-width: 400px; /* Límite máximo para que no sea gigante en PC */
+    aspect-ratio: 1 / 1; /* Mantiene el círculo perfecto */
+    
+    position: relative;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    /*border: .2rem solid var(--main-color);*/
-    /*box-shadow: 0 0 1rem var(--main-color);*/
+    z-index: 1;
+
+    /* Efectos de Borde y Neon */
+    box-shadow: 
+        0 0 0 4px var(--bg-color), 
+        0 0 0 8px var(--main-color), 
+        0 0 30px var(--main-color), 
+        0 0 60px rgba(0, 224, 179, 0.4); 
+    
+    background: var(--bg-color);
     animation: floatImage 4s ease-in-out infinite;
+}
+
+/* Pseudo-elemento para el pulso trasero */
+.about-img::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, transparent 60%, var(--main-color) 70%);
+    opacity: 0.5;
+    z-index: -1;
+    animation: pulseBorder 3s infinite ease-in-out;
 }
 
 .about-img img {
@@ -189,103 +251,91 @@ span {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    border: 3px solid var(--bg-color);
     transition: 0.5s ease;
 }
 
 .about-img img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Zoom sutil al pasar mouse */
 }
 
+/* --- ESTILOS DEL TEXTO --- */
 .about-content {
-    flex: 1; /* Permite que el contenido ocupe el espacio restante */
+    /* Flexibilidad: base de 500px. 
+       Esto evita que el texto se aplaste. Si hay menos de 500px, 
+       la caja bajará debajo de la imagen gracias al flex-wrap */
+    flex: 1 1 500px; 
+    text-align: left;
 }
 
-
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 5rem 9%;
-}
-/* ---------------------------------------------------- */
-/* Media Query para la sección 'Acerca de Mí' en Móviles */
-/* ---------------------------------------------------- */
-@media (max-width: 1199px) {
-    .about-container {
-        padding: 5rem 5%;
-        gap: 1.5rem;
-    }
+.about-content h2 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
+.about-content h3 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: var(--main-color);
+}
 
+.about-content p {
+    font-size: 1.6rem;
+    line-height: 1.8; /* Más espacio entre líneas para mejor lectura */
+    margin-bottom: 2.5rem;
+    color: var(--text-color);
+}
 
+/* --- ANIMACIONES --- */
+@keyframes floatImage {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-1.5rem); }
+    100% { transform: translateY(0); }
+}
 
+@keyframes pulseBorder {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 0.2; }
+}
+
+/* ==================== MEDIA QUERIES UNIFICADAS ==================== */
+
+/* Para Tablets y Laptops pequeñas (menos de 991px) */
 @media (max-width: 991px) {
     .about-container {
-        flex-direction: column-reverse;
+        flex-direction: column; /* Forzamos columna para asegurar orden */
         text-align: center;
-        padding: 5rem 3%;
-        gap: 1.5rem;
+        gap: 3rem;
     }
+
     .about-img {
-        width: 50vw;
-        height: 50vw;
-        margin-top: 2rem;
+        width: 50vw; /* Tamaño relativo a la pantalla */
+        max-width: 300px;
+        height: auto; /* Mantiene proporción */
     }
+
+    .about-content {
+        text-align: center; /* Centramos texto */
+        flex-basis: auto; /* Dejamos que ocupe lo que necesite */
+    }
+
     .about-content h2 {
-        font-size: 3.2rem;
-        text-align: center;
-    }
-    .about-content h3 {
-        font-size: 2.2rem;
+        font-size: 3.5rem;
     }
 }
-@media (max-width: 768px) {
-    /* ... otros estilos responsivos ... */
 
+/* Para Móviles (menos de 768px) */
+@media (max-width: 768px) {
     .about {
-        flex-direction: column-reverse; /* Cambia el orden: texto arriba, imagen abajo */
-        text-align: center;
         padding-top: 5rem;
     }
 
     .about-img {
-        width: 60vw; /* Reduce el ancho de la imagen */
-        height: 60vw;
-        margin-bottom: 2rem;
+        width: 65vw; /* Un poco más grande en móviles */
     }
-    
-    .about-content h2 {
-        font-size: 3.5rem;
-    }
-    
-    .about-content h3 {
-        font-size: 2.5rem;
-    }
-    
-    .about-content p {
-        font-size: 1.6rem;
-    }
-    
-    /* ... otros estilos responsivos ... */
-}
 
-/* Media Query para teléfonos muy pequeños */
-@media (max-width: 450px) {
-    /* ... otros estilos responsivos ... */
-    
-     .about-container {
-        padding: 5rem 2%;
-        gap: 1rem;
-     }
-    .about-img {
-        width: 75vw; /* Reduce aún más el ancho de la imagen */
-        height: 75vw;
-    }
-    
     .about-content h2 {
         font-size: 3rem;
     }
@@ -293,35 +343,18 @@ span {
     .about-content h3 {
         font-size: 2rem;
     }
-    
-    /* ... otros estilos responsivos ... */
 }
 
-/* Para pantallas de hasta 300px (móviles extremadamente pequeños) */
-@media (max-width: 300px) {
-      html {
-        font-size: 35%; /* Reduce aún más el tamaño base de la fuente */
-    }
-    .about-container {
-        padding: 4rem 1%;
-        gap: 0.5rem;
-    }
+/* Para Móviles Muy Pequeños (menos de 450px) */
+@media (max-width: 450px) {
     .about-img {
-        width: 90vw;
-        height: 90vw;
+        width: 80vw; /* Casi todo el ancho */
     }
-    .about-content h2 {
-        font-size: 2.2rem;
-    }
-    .about-content h3 {
-        font-size: 1.6rem;
-    }
+    
     .about-content p {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 }
-
-
 .contenedor-foto {
     width: 35vw; /* Usa vw para que el ancho sea proporcional a la pantalla */
     height: 35vw; /* Usa vw para que la altura sea proporcional a la pantalla */
@@ -771,15 +804,19 @@ span {
     margin-bottom: 1.5rem;
 }
 
-/* ==================== LIGHTBOX STYLES (CORREGIDO) ==================== */
+/* ==================== LIGHTBOX STYLES (MODERNO & RESPONSIVE) ==================== */
 .lightbox-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
-    z-index: 2000; /* Por encima de todo */
+    /* Fondo oscuro pero con efecto de desenfoque (Glassmorphism) */
+    background-color: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); /* Soporte Safari */
+    
+    z-index: 10000; /* Prioridad absoluta */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -796,7 +833,7 @@ span {
     pointer-events: auto;
 }
 
-/* Contenedor de la imagen para centrar */
+/* Contenedor del contenido */
 .lightbox-content {
     position: relative;
     max-width: 90%;
@@ -804,50 +841,139 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-/* Imagen con Animación de Zoom */
+/* Imagen con Efecto Neon Sutil */
 .lightbox-image {
-    max-width: 90vw;
-    max-height: 80vh;
+    max-width: 98vw;
+    max-height: 98vh; /* Deja espacio para el texto y márgenes */
     object-fit: contain;
-    border: 2px solid var(--main-color);
-    border-radius: 0.5rem;
-    box-shadow: 0 0 3rem rgba(0, 224, 179, 0.3);
-    transform: scale(0.7); /* Zoom inicial pequeño */
+    
+    /* Borde sutil y sombra elegante */
+    border: 1px solid var(--main-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.5);
+    background-color: #fff; /* Fondo blanco ayuda a la lectura si es PNG transparente */
+    
+    /* Animación de entrada */
+    transform: scale(0.9);
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .lightbox-modal.active .lightbox-image {
-    transform: scale(1); /* Zoom final normal */
-}
-
-/* Botón Cerrar */
-.lightbox-close {
-    position: absolute;
-    top: 2rem;
-    right: 3rem;
-    color: #fff;
-    background: transparent;
-    border: none;
-    font-size: 5rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-    z-index: 2001;
-    line-height: 1;
-}
-
-.lightbox-close:hover {
-    color: var(--main-color);
-    transform: rotate(90deg);
+    transform: scale(1);
 }
 
 /* Texto descriptivo (Caption) */
 .lightbox-caption {
-    margin-top: 1rem;
-    color: var(--text-color);
-    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    color: #fff;
+    font-size: 1.8rem;
     text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    
+    /* Fondo pastilla para mejor lectura */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--main-color);
+}
+
+/* === BOTONES DE CONTROL (CERRAR Y NAVEGACIÓN) === */
+
+/* Botón Cerrar (X) */
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+    background: rgba(0, 0, 0, 0.5); /* Fondo circular para contraste */
+    border-radius: 50%;
+    color: #fff;
+    border: 2px solid transparent;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10001;
+    line-height: 0;
+}
+
+.lightbox-close:hover {
+    color: var(--main-color);
+    border-color: var(--main-color);
+    transform: rotate(90deg) scale(1.1);
+    background: rgba(0,0,0,0.8);
+}
+
+/* Flechas de Navegación (Prev / Next) */
+.lightbox-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid transparent;
+    font-size: 3rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10001;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.lightbox-btn:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.lightbox-btn.prev { left: 3rem; }
+.lightbox-btn.next { right: 3rem; }
+
+
+/* === MEDIA QUERIES (RESPONSIVE) === */
+@media (max-width: 768px) {
+    .lightbox-image {
+        max-width: 100%;
+        max-height: 75vh; /* Más pequeño en móvil para ver los botones */
+        border-radius: 0.5rem;
+    }
+
+    .lightbox-close {
+        top: 1rem;
+        right: 1rem;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2.5rem;
+    }
+
+    /* En móvil las flechas se pegan a los bordes y son más pequeñas */
+    .lightbox-btn {
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 2rem;
+        background: rgba(0, 0, 0, 0.5); /* Más contraste en móvil */
+    }
+    
+    .lightbox-btn.prev { left: 1rem; }
+    .lightbox-btn.next { right: 1rem; }
+    
+    .lightbox-caption {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
 }
 
 /* Clase para bloquear el scroll del fondo */
@@ -997,50 +1123,93 @@ body.no-scroll {
 
 
 
-/*=== Estilo del Botón de Idioma (Responsivo) ===*/
+/* --- BOTÓN DE IDIOMA (INTEGRADO AL MENÚ) --- */
 .language-toggle-btn {
-    /* Estilos base */
-    position: fixed;
-    top: 2.5rem;
-    right: 2.5rem;
-    z-index: 1001; /* Asegura que esté por encima de la barra de navegación */
-    display: flex;
+    /* Reseteamos la posición fija para que entre en el flujo */
+    position: static !important; 
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: var(--text-color);
+    
+    padding: 0.6rem 1.8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    
+    color: var(--bg-color); /* Texto oscuro para contraste */
     background: var(--main-color);
-    border-radius: 5rem;
+    border: 2px solid var(--main-color);
+    border-radius: 2rem;
+    
     cursor: pointer;
-    transition: all 0.5s ease;
-    box-shadow: 0 0 1rem var(--main-color);
-    border: 4px solid var(--text-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 1rem rgba(0, 224, 179, 0.4);
+    
+    margin-left: 1rem; /* Separación extra del último link */
 }
 
-/* Efecto al pasar el mouse */
 .language-toggle-btn:hover {
-    background: var(--second-bg-color);
+    background: transparent;
     color: var(--main-color);
-    transform: rotate(360deg) scale(1.1);
-    box-shadow: 0 0 2rem var(--main-color);
-    border-color: var(--main-color);
+    box-shadow: 0 0 1.5rem var(--main-color);
+    transform: scale(1.05); /* Efecto sutil, no rotación completa */
 }
 
-/* Reglas responsivas para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    .language-toggle-btn {
-        top: auto; /* Desactiva la posición superior */
-        bottom: 2rem; /* Lo mueve a la parte inferior */
-        right: 2rem;
-        padding: 0.8rem 1.5rem; /* Reduce el tamaño */
+/* ==================== MEDIA QUERIES (Ajustes para que no se rompa) ==================== */
+
+/* Tablet Grande / Laptop Pequeña (Menos de 1280px) */
+@media (max-width: 1350px) {
+    /* Cuando hay poco espacio, reducimos letra y espacios */
+    .header {
+        padding: 1.5rem 2%; 
+    }
+    .navbar {
+        gap: 1.5rem;
+    }
+    .navbar a {
         font-size: 1.4rem;
-        box-shadow: 0 0 0.8rem var(--main-color);
     }
 }
 
+/* Tablet (Menos de 991px - Aquí activamos el menú hamburguesa) */
+@media (max-width: 1150px) { 
+    /* Cambié el breakpoint de 991px a 1150px porque tienes MUCHOS items */
+    
+    #menu-icon {
+        display: block; /* Aparece la hamburguesa antes */
+    }
 
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none; /* Oculto por defecto */
+        flex-direction: column; /* Lista vertical */
+        align-items: flex-start; /* Alineado a la izquierda */
+    }
+
+    .navbar.active {
+        display: flex; /* Se muestra al activar */
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 1.5rem 0;
+        width: 100%;
+    }
+    
+    /* El botón en móvil se ve diferente */
+    .language-toggle-btn {
+        margin: 2rem auto; /* Centrado */
+        width: auto;
+        display: inline-block;
+    }
+}
 
 
 
@@ -1383,4 +1552,62 @@ font-weight: 700;
 
 
     }
+}
+
+
+/* ==================== CARRUSEL DE CURRICULUMS ==================== */
+.cv-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 350px; /* Ancho máximo de la hoja A4 en pantalla */
+    margin: 1.5rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
+    border: 2px solid var(--second-bg-color);
+}
+
+.cv-slider {
+    display: flex;
+    overflow-x: hidden; /* Ocultamos el scroll bar, lo movemos con JS */
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.cv-slide {
+    min-width: 100%; /* Cada página ocupa el 100% del contenedor */
+    height: auto;
+    object-fit: contain;
+    scroll-snap-align: center;
+    display: block;
+}
+
+/* Botones de navegación del CV (pequeños y discretos) */
+.cv-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--main-color);
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+    border-radius: 0.5rem;
+}
+
+.cv-nav-btn:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+}
+
+.cv-nav-btn.prev { left: 5px; }
+.cv-nav-btn.next { right: 5px; }
+
+/* Indicador de "Click para ampliar" (Opcional, usando tu lightbox existente) */
+.cv-slide:hover {
+    cursor: zoom-in;
+    opacity: 0.9;
 }
