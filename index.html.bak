@@ -74,8 +74,7 @@
           data-lang-key="curriculumbtn"
           >Curriculum</a
         >
-        <a href="#fusalabs" data-lang-key="nav_fusalabs">Fusalabs</a>
-
+  
         <a
           href="#"
           class="language-toggle-btn"
@@ -105,10 +104,10 @@
          <!-- === NUEVO GRUPO DE BOTONES === -->
         <div class="btn-group">
             <!-- Botón Español -->
-            <a href="images/curriculum/CV_Fabio_Arias_ES.pdf" download class="btn" data-lang-key="download_cv_es">CV Español</a>
-
+            <a href="images/curriculum/CV-Fabio2026Espanish.pdf" download class="btn" data-lang-key="download_cv_es">CV Español</a>
+            
             <!-- Botón Inglés -->
-            <a href="images/curriculum/CV_Fabio_Arias_EN.pdf" download class="btn" data-lang-key="download_cv_en">CV English</a>
+            <a href="images/curriculum/CV-ENGLISH.pdf" download class="btn" data-lang-key="download_cv_en">CV English</a>
         </div>
         <!-- ============================== -->
       </div>
@@ -189,51 +188,6 @@ capacitaciones. Capacidad demostrada para diseñar y desarrollar aplicaciones co
 
         <!-- Carril de las tarjetas (Flex) -->
         <div class="slider-track" id="sliderTrack">
-            <!-- NUEVA: Microsoft Certified Azure AI Engineer (OFICIAL) -->
-            <div class="cert-card" data-color="blue">
-                <div class="cert-img-box">
-                    <img src="images/certificaciones/MicrosoftAzureAI.jpg" alt="Microsoft Certified Azure AI Engineer Associate">
-                </div>
-                <h3 data-lang-key="cert_microsoft_azure_title">Microsoft Certified: Azure AI Engineer Associate</h3>
-                <p data-lang-key="cert_microsoft_azure_description">Certificación oficial de Microsoft que valida la capacidad de diseñar e implementar soluciones de IA con Azure AI Services, Machine Learning y procesamiento de lenguaje natural.</p>
-            </div>
-
-            <!-- NUEVA: Bootcamp Azure AI (Código Facilito) -->
-            <div class="cert-card" data-color="green">
-                <div class="cert-img-box">
-                    <img src="images/certificaciones/BootcampAzureAI.jpg" alt="Bootcamp Azure AI Engineer Associate">
-                </div>
-                <h3 data-lang-key="cert_azure_bootcamp_title">Bootcamp Azure AI Engineer Associate</h3>
-                <p data-lang-key="cert_azure_bootcamp_description">Bootcamp intensivo de 12 semanas (+26 horas) de Código Facilito, enfocado en la preparación para la certificación Azure AI Engineer.</p>
-            </div>
-
-            <!-- NUEVA: Fundamentos Full Stack (LinkedIn Learning) -->
-            <div class="cert-card" data-color="green">
-                <div class="cert-img-box">
-                    <img src="images/certificaciones/CertificadoFullstack.jpg" alt="Fundamentos del Desarrollo Web Full Stack">
-                </div>
-                <h3 data-lang-key="cert_fullstack_fundamentals_title">Fundamentos del Desarrollo Web: Full Stack</h3>
-                <p data-lang-key="cert_fullstack_fundamentals_description">Certificado de LinkedIn Learning sobre los fundamentos del desarrollo web full stack y front-end.</p>
-            </div>
-
-            <!-- NUEVA: Blockchain (LinkedIn Learning) -->
-            <div class="cert-card" data-color="blue">
-                <div class="cert-img-box">
-                    <img src="images/certificaciones/blockchain.jpg" alt="Fundamentos de la Tecnología Blockchain">
-                </div>
-                <h3 data-lang-key="cert_blockchain_title">Fundamentos de la Tecnología Blockchain</h3>
-                <p data-lang-key="cert_blockchain_description">Certificado de LinkedIn Learning sobre los conceptos y fundamentos de la tecnología blockchain.</p>
-            </div>
-
-            <!-- NUEVA: Fintech (LinkedIn Learning) -->
-            <div class="cert-card" data-color="orange">
-                <div class="cert-img-box">
-                    <img src="images/certificaciones/Fintech.jpg" alt="Fundamentos de Fintech">
-                </div>
-                <h3 data-lang-key="cert_fintech_title">Fundamentos de Fintech (Finanzas Tecnológicas)</h3>
-                <p data-lang-key="cert_fintech_description">Certificado de LinkedIn Learning sobre los fundamentos de las finanzas tecnológicas y el ecosistema fintech.</p>
-            </div>
-
           <!--0. Tecnicatura Universitaria en Programacion-->
              <div class="cert-card" data-color="blue">
                 <div class="cert-img-box">
@@ -561,7 +515,7 @@ capacitaciones. Capacidad demostrada para diseñar y desarrollar aplicaciones co
 </section>
 
     <section class="services" id="programming-languages">
-      <h2 class="heading" data-lang-key="languages_heading_title">
+      <h2 class="heading" data-lang-key="languages_heading">
         Lenguajes de
         <span data-lang-key="languages_heading_span">Programación</span>
       </h2>
@@ -666,64 +620,6 @@ capacitaciones. Capacidad demostrada para diseñar y desarrollar aplicaciones co
         Últimos <span data-lang-key="portfolio_heading_span">Proyectos</span>
       </h2>
       <div class="portfolio-container">
-        <!-- NUEVO: MF-CRM (tarjeta de diseño, sin captura) -->
-        <div class="portfolio-box design-card">
-          <div class="design-card-bg">
-            <i class='bx bxs-bank'></i>
-            <h3>MF-CRM</h3>
-            <div class="stack-tags">
-              <span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>PostgreSQL</span>
-            </div>
-          </div>
-          <div class="portfolio-layer">
-            <h4 data-lang-key="project_mfcrm_title">MF-CRM — Consultoría Jurídica</h4>
-            <p data-lang-key="project_mfcrm_description">
-              Plataforma SPA de gestión integral y calculadora de liquidaciones laborales/ART para estudios jurídicos. Modelo SaaS freemium con cálculos automatizados.
-            </p>
-            <span class="private-badge"><i class='bx bxs-lock-alt'></i> Proyecto privado</span>
-          </div>
-        </div>
-
-        <!-- NUEVO: Citronela -->
-        <div class="portfolio-box design-card">
-          <div class="design-card-bg">
-            <i class='bx bxs-leaf'></i>
-            <h3>Citronela</h3>
-            <div class="stack-tags">
-              <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span>
-            </div>
-          </div>
-          <div class="portfolio-layer">
-            <h4 data-lang-key="project_citronela_title">Citronela — E-commerce de botánica</h4>
-            <p data-lang-key="project_citronela_description">
-              Tienda online de productos botánicos con catálogo, carrito, gestión de pedidos y pasarela de pago. Integración con WhatsApp Business API.
-            </p>
-            <a href="https://www.fusalabs.com" target="_blank" rel="noopener">
-              <i class='bx bx-link-external'></i> Ver en Fusalabs
-            </a>
-          </div>
-        </div>
-
-        <!-- NUEVO: PlumaUy -->
-        <div class="portfolio-box design-card">
-          <div class="design-card-bg">
-            <i class='bx bxs-pen'></i>
-            <h3>PlumaUy</h3>
-            <div class="stack-tags">
-              <span>Next.js</span><span>TypeScript</span><span>Tailwind</span>
-            </div>
-          </div>
-          <div class="portfolio-layer">
-            <h4 data-lang-key="project_plumauy_title">PlumaUy — Papelería artesanal</h4>
-            <p data-lang-key="project_plumauy_description">
-              Plataforma e-commerce para una marca de papelería artesanal, con catálogo, carrito y checkout. Diseño responsive enfocado en marca y conversión.
-            </p>
-            <a href="https://www.fusalabs.com" target="_blank" rel="noopener">
-              <i class='bx bx-link-external'></i> Ver en Fusalabs
-            </a>
-          </div>
-        </div>
-
         <div class="portfolio-box">
           <img src="images/portfolio3.jpg" alt="Proyecto 1" />
           <div class="portfolio-layer">
@@ -862,27 +758,24 @@ capacitaciones. Capacidad demostrada para diseñar y desarrollar aplicaciones co
                 <!-- Contenedor de Imágenes (Slider) -->
                 <div class="cv-slider" id="cv-es-slider">
                     <!-- Página 1 -->
-                    <img
-                        src="images/curriculum/CV_Fabio_Arias_ES_p1.jpg"
-                        class="cv-slide"
+                    <img 
+                        src="images/curriculum/CV-Fabio2026Espanish.jpg" 
+                        class="cv-slide" 
                         alt="Curriculum Español Pag 1"
                     >
                     <!-- Página 2 -->
-                    <img
-                        src="images/curriculum/CV_Fabio_Arias_ES_p2.jpg"
-                        class="cv-slide"
+                    <img 
+                        src="images/curriculum/CV-Fabio2026Espanish-2.jpg" 
+                        class="cv-slide" 
                         alt="Curriculum Español Pag 2"
                     >
                 </div>
-
+                
                 <!-- Botón Siguiente -->
                 <button class="cv-nav-btn next" onclick="moveCvSlide('cv-es', 1)">&#10095;</button>
             </div>
 
             <p data-lang-key="curriculum_description_es"></p>
-            <a href="images/curriculum/CV_Fabio_Arias_ES.pdf" download class="btn" data-lang-key="curriculum_download_es">
-                <i class='bx bxs-download'></i> Descargar CV (PDF)
-            </a>
         </div>
 
         <!-- === CAJA CURRICULUM INGLÉS === -->
@@ -900,27 +793,24 @@ capacitaciones. Capacidad demostrada para diseñar y desarrollar aplicaciones co
                 <!-- Contenedor de Imágenes (Slider) -->
                 <div class="cv-slider" id="cv-en-slider">
                     <!-- Página 1 -->
-                    <img
-                        src="images/curriculum/CV_Fabio_Arias_EN_p1.jpg"
-                        class="cv-slide"
+                    <img 
+                        src="images/curriculum/CV-ENGLISH_page-0001.jpg" 
+                        class="cv-slide" 
                         alt="English Resume Page 1"
                     >
                     <!-- Página 2 -->
-                    <img
-                        src="images/curriculum/CV_Fabio_Arias_EN_p2.jpg"
-                        class="cv-slide"
+                    <img 
+                        src="images/curriculum/CV-ENGLISH_page-0002.jpg" 
+                        class="cv-slide" 
                         alt="English Resume Page 2"
                     >
                 </div>
-
+                
                 <!-- Botón Siguiente -->
                 <button class="cv-nav-btn next" onclick="moveCvSlide('cv-en', 1)">&#10095;</button>
             </div>
 
             <p data-lang-key="curriculum_description_en"></p>
-            <a href="images/curriculum/CV_Fabio_Arias_EN.pdf" download class="btn" data-lang-key="curriculum_download_en">
-                <i class='bx bxs-download'></i> Download CV (PDF)
-            </a>
         </div>
 
     </div>
@@ -972,20 +862,6 @@ capacitaciones. Capacidad demostrada para diseñar y desarrollar aplicaciones co
       </form>
     </section> -->
 
-    <!-- ==================== SECCIÓN FUSALABS (CTA) ==================== -->
-    <section class="fusalabs-cta" id="fusalabs">
-      <div class="fusalabs-inner">
-        <i class='bx bxs-rocket'></i>
-        <h2>Fusalabs</h2>
-        <p data-lang-key="fusalabs_tagline">
-          Mi software factory: desarrollo de productos web a medida, e-commerce y soluciones con IA para empresas y emprendedores.
-        </p>
-        <a href="https://www.fusalabs.com" target="_blank" rel="noopener" class="btn">
-          <i class='bx bx-globe'></i> Visitar www.fusalabs.com
-        </a>
-      </div>
-    </section>
-
     <footer class="footer">
       <div class="footer-text">
         <p data-lang-key="footer_copyright_text">
@@ -1015,7 +891,4 @@ capacitaciones. Capacidad demostrada para diseñar y desarrollar aplicaciones co
     </div>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="js/script.js"></script>
-  </body>
-</html>
+    <scr

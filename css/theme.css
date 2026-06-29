@@ -1,0 +1,544 @@
+/* ============================================================
+   THEME.CSS — Capa de rediseño visual (Fabio Arias Portfolio)
+   Se carga DESPUÉS de style.css, por lo que sobreescribe.
+   Para revertir: quitar el <link> de theme.css en index.html.
+   ============================================================ */
+
+/* ---------- Tipografía ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ---------- Tokens / Paleta refinada ---------- */
+:root {
+    --bg-color: #0a0e16;             /* navy profundo */
+    --second-bg-color: #111726;      /* superficie elevada */
+    --surface-3: #1a2236;            /* cards / hover */
+    --text-color: #eaf0f7;
+    --text-muted: #9fb0c3;
+    --main-color: #2ee6c0;           /* teal brillante */
+    --accent-2: #4f9cff;             /* azul */
+    --accent-3: #a78bfa;             /* violeta */
+    --grad: linear-gradient(120deg, #2ee6c0 0%, #4f9cff 55%, #a78bfa 100%);
+    --grad-soft: linear-gradient(120deg, rgba(46,230,192,.15), rgba(79,156,255,.12));
+    --ring: rgba(46, 230, 192, .35);
+    --shadow-lg: 0 24px 60px -20px rgba(0,0,0,.6);
+    --radius: 1.6rem;
+}
+
+/* Tipografías base */
+* { font-family: 'Inter', sans-serif; }
+h1, h2, h3, h4, .logo, .heading, .navbar a, .btn {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* ---------- Fondo global con glow sutil + grano ---------- */
+body {
+    background:
+        radial-gradient(900px 600px at 85% -5%, rgba(79,156,255,.12), transparent 60%),
+        radial-gradient(800px 600px at 0% 20%, rgba(46,230,192,.10), transparent 55%),
+        var(--bg-color);
+    background-attachment: fixed;
+}
+body::after {
+    /* textura de grano muy sutil */
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: .035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Header: glassmorphism ---------- */
+.header {
+    background: rgba(10, 14, 22, .55);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+}
+.header.sticky {
+    background: rgba(10, 14, 22, .8);
+    border-bottom: 1px solid rgba(46,230,192,.18);
+}
+.logo {
+    font-weight: 700;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.navbar a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: var(--text-muted);
+    position: relative;
+}
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -6px;
+    width: 0; height: 2px;
+    background: var(--grad);
+    border-radius: 2px;
+    transition: width .3s ease;
+}
+.navbar a:hover, .navbar a.active {
+    color: var(--text-color);
+}
+.navbar a:hover::after, .navbar a.active::after { width: 100%; }
+
+.language-toggle-btn {
+    background: var(--grad) !important;
+    border: none !important;
+    color: #06121a !important;
+    font-weight: 700;
+    box-shadow: 0 6px 18px -6px var(--ring);
+}
+.language-toggle-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+    color: #06121a !important;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.home {
+    position: relative;
+    overflow: hidden;
+    gap: 4rem;
+    z-index: 2;
+}
+/* blobs animados de fondo del hero */
+.home::before {
+    content: '';
+    position: absolute;
+    inset: -20% -10% auto auto;
+    width: 55rem; height: 55rem;
+    background: radial-gradient(circle at 30% 30%, rgba(46,230,192,.35), transparent 60%),
+                radial-gradient(circle at 70% 70%, rgba(79,156,255,.30), transparent 60%);
+    filter: blur(60px);
+    opacity: .55;
+    z-index: -1;
+    animation: heroFloat 14s ease-in-out infinite alternate;
+}
+.home::after {
+    content: '';
+    position: absolute;
+    left: -10%; bottom: -25%;
+    width: 40rem; height: 40rem;
+    background: radial-gradient(circle, rgba(167,139,250,.28), transparent 60%);
+    filter: blur(70px);
+    z-index: -1;
+    animation: heroFloat 18s ease-in-out infinite alternate-reverse;
+}
+@keyframes heroFloat {
+    0%   { transform: translate(0,0) scale(1); }
+    100% { transform: translate(-4rem, 3rem) scale(1.15); }
+}
+
+.home-content { position: relative; z-index: 2; }
+
+.home-content h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+/* pill "Hola yo soy" */
+.home-content > h3:first-child {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--main-color);
+    padding: .6rem 1.4rem;
+    border: 1px solid rgba(46,230,192,.35);
+    border-radius: 4rem;
+    background: var(--grad-soft);
+    margin-bottom: 1.8rem;
+}
+
+.home-content h1 {
+    font-size: 7.2rem;
+    font-weight: 700;
+    line-height: 1.05;
+    margin: .5rem 0 1rem;
+    background: linear-gradient(180deg, #ffffff 30%, #b9c6d6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-content h3 .multiple-text,
+.multiple-text {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.7rem;
+    color: var(--text-muted);
+    max-width: 52rem;
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+/* Redes sociales — refinadas */
+.social-media a {
+    border-color: rgba(255,255,255,.15);
+    color: var(--text-color);
+    width: 4.4rem; height: 4.4rem;
+    backdrop-filter: blur(4px);
+    transition: .35s ease;
+}
+.social-media a:hover {
+    background: var(--grad);
+    border-color: transparent;
+    color: #06121a;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px -8px var(--ring);
+}
+
+/* Botones modernos */
+.btn {
+    background: var(--grad);
+    color: #06121a;
+    font-weight: 700;
+    padding: 1.2rem 3rem;
+    box-shadow: 0 12px 28px -10px var(--ring);
+    border-radius: 4rem;
+    transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.06);
+    box-shadow: 0 18px 36px -10px var(--ring);
+}
+/* Segundo botón del grupo como "ghost" para jerarquía */
+.btn-group .btn:last-child {
+    background: transparent;
+    color: var(--text-color);
+    border: 1.5px solid rgba(255,255,255,.18);
+    box-shadow: none;
+}
+.btn-group .btn:last-child:hover {
+    border-color: var(--main-color);
+    color: var(--main-color);
+    background: var(--grad-soft);
+}
+
+/* Foto del hero con glow / anillo */
+.contenedor-foto {
+    position: relative;
+    border: none;
+    width: 34vw; height: 34vw;
+    max-width: 42rem; max-height: 42rem;
+    box-shadow: 0 0 0 2px rgba(46,230,192,.5),
+                0 0 0 12px rgba(46,230,192,.06),
+                var(--shadow-lg);
+    animation: floatImage 5s ease-in-out infinite;
+}
+.contenedor-foto::before {
+    content: '';
+    position: absolute;
+    inset: -24px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, var(--main-color), var(--accent-2), var(--accent-3), var(--main-color));
+    filter: blur(26px);
+    opacity: .45;
+    z-index: -1;
+    animation: spin 12s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ============================================================
+   HEADINGS de sección
+   ============================================================ */
+.heading, .services h2.heading {
+    font-size: 4.8rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+.heading span, .services h2.heading span {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* ============================================================
+   SECCIONES / SUPERFICIES
+   ============================================================ */
+.about, .portfolio { background: var(--second-bg-color); position: relative; z-index: 2; }
+section { position: relative; z-index: 2; }
+
+.about-content h2 { font-size: 4.5rem; }
+.about-content h3 { color: var(--main-color); }
+.about-content p { color: var(--text-muted); }
+
+/* Cards (services / cert / tech) — más limpias y consistentes */
+.services-box, .cert-card, .tech-card {
+    background: linear-gradient(180deg, var(--surface-3), var(--second-bg-color));
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px -18px rgba(0,0,0,.7);
+}
+.services-box:hover, .cert-card:hover, .tech-card:hover {
+    border-color: rgba(46,230,192,.45);
+    box-shadow: 0 22px 48px -20px var(--ring);
+    transform: translateY(-8px);
+}
+.services-box i { color: var(--main-color); }
+.services-box h3 { animation: none; color: var(--text-color); }
+.services-box p { color: var(--text-muted); }
+
+/* Botón de "ver más" dentro de cards */
+.services-box .btn { color: #06121a; border-radius: .9rem; }
+
+/* Portfolio overlay más elegante */
+.portfolio-box .portfolio-layer {
+    background: linear-gradient(to top, rgba(6,10,16,.92) 10%, rgba(46,230,192,.55) 100%);
+}
+.portfolio-layer a {
+    background: var(--grad);
+    color: #06121a;
+}
+
+/* Footer */
+.footer { background: var(--second-bg-color); border-top: 1px solid rgba(255,255,255,.06); }
+.footer-iconTop a { background: var(--grad); }
+
+/* ============================================================
+   RESPONSIVE: ajustes del hero rediseñado
+   ============================================================ */
+@media (max-width: 991px) {
+    .home-content h1 { font-size: 5.6rem; }
+    .contenedor-foto { width: 60vw; height: 60vw; }
+}
+@media (max-width: 768px) {
+    .home-content h1 { font-size: 4.6rem; }
+    .home-content > h3:first-child { font-size: 1.3rem; }
+    .heading, .services h2.heading { font-size: 3.6rem; }
+    .contenedor-foto { width: 70vw; height: 70vw; }
+}
+@media (max-width: 450px) {
+    .home-content h1 { font-size: 3.8rem; }
+}
+
+/* Respeta usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .home::before, .home::after, .contenedor-foto, .contenedor-foto::before { animation: none; }
+}
+
+/* ============================================================
+   TARJETA DE PROYECTO SIN CAPTURA (design-card)
+   ============================================================ */
+.portfolio-box.design-card { aspect-ratio: 16 / 9; }
+.design-card-bg {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 1.1rem;
+    background: linear-gradient(135deg, #111726 0%, #1a2236 55%, rgba(46,230,192,.12) 100%);
+    position: relative;
+    overflow: hidden;
+}
+.design-card-bg::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 30%, rgba(46,230,192,.20), transparent 60%);
+}
+.design-card-bg i {
+    font-size: 5.5rem;
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    position: relative;
+}
+.design-card-bg h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.8rem; color: var(--text-color); position: relative;
+}
+.stack-tags {
+    display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
+    position: relative; padding: 0 1.2rem; max-width: 90%;
+}
+.stack-tags span {
+    font-size: 1.2rem; color: var(--text-muted);
+    border: 1px solid rgba(255,255,255,.14); border-radius: 2rem;
+    padding: .35rem 1rem; background: rgba(255,255,255,.04);
+}
+.private-badge {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-size: 1.4rem; font-weight: 700; color: #06121a;
+    background: var(--grad); padding: .7rem 1.6rem; border-radius: 2rem;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   PORTFOLIO: overlay y BOTÓN siempre visibles + responsividad
+   ============================================================ */
+.portfolio-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.portfolio-box { aspect-ratio: 16 / 11; }
+
+.portfolio-box .portfolio-layer {
+    justify-content: center;
+    gap: .5rem;
+    padding: 1.6rem 1.4rem;
+    overflow-y: auto;                 /* seguridad: nada queda inaccesible */
+    background: linear-gradient(to top, rgba(6,10,16,.96) 30%, rgba(46,230,192,.45) 100%);
+}
+.portfolio-layer h4 {
+    font-size: 1.9rem;
+    margin-bottom: .2rem;
+    line-height: 1.15;
+    flex-shrink: 0;
+}
+.portfolio-layer p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin: 0 0 1.1rem;
+    /* recorta a 5 líneas para que SIEMPRE entre el botón */
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/* Botón: pill claro, nunca se corta */
+.portfolio-layer a {
+    width: auto;
+    height: auto;
+    min-height: 4.4rem;
+    padding: .7rem 2rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    gap: .6rem;
+    background: var(--grad);
+    color: #06121a;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px -8px var(--ring);
+}
+.portfolio-layer a i { font-size: 2rem; }
+.portfolio-layer a:hover { filter: brightness(1.08); transform: translateY(-2px); }
+
+/* En pantallas táctiles (sin hover) mostramos el overlay siempre */
+@media (hover: none) {
+    .portfolio-box .portfolio-layer { transform: translateY(0); }
+    .portfolio-box img { transform: scale(1.05); }
+    .portfolio-box.design-card .design-card-bg { filter: brightness(.5); }
+}
+
+@media (max-width: 768px) {
+    .portfolio-box { aspect-ratio: 16 / 12; }
+    .portfolio-layer p { -webkit-line-clamp: 4; font-size: 1.25rem; }
+    .portfolio-layer h4 { font-size: 1.7rem; }
+}
+@media (max-width: 450px) {
+    .portfolio-box { aspect-ratio: 4 / 3; }
+}
+
+/* ============================================================
+   SECCIÓN FUSALABS (CTA / banner)
+   ============================================================ */
+.fusalabs-cta {
+    min-height: auto;
+    padding: 6rem 9% 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    position: relative;
+    z-index: 2;
+}
+.fusalabs-inner {
+    width: 100%;
+    max-width: 95rem;
+    text-align: center;
+    padding: 5rem 3rem;
+    border-radius: 2.6rem;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(600px 280px at 50% 0%, rgba(46,230,192,.20), transparent 70%),
+        linear-gradient(135deg, #111726, #1a2236);
+    border: 1px solid rgba(46,230,192,.28);
+    box-shadow: var(--shadow-lg);
+}
+.fusalabs-inner > i {
+    font-size: 5rem;
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.fusalabs-inner h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4.6rem;
+    margin: 1rem 0 1.2rem;
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.fusalabs-inner p {
+    font-size: 1.7rem;
+    color: var(--text-muted);
+    max-width: 62rem;
+    margin: 0 auto 2.6rem;
+    line-height: 1.65;
+}
+.fusalabs-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: 1.6rem;
+}
+.fusalabs-cta .btn i { font-size: 2rem; }
+
+@media (max-width: 768px) {
+    .fusalabs-inner { padding: 3.5rem 1.6rem; }
+    .fusalabs-inner h2 { font-size: 3.4rem; }
+    .fusalabs-inner p { font-size: 1.5rem; }
+}
+
+/* ============================================================
+   BOTONES DE DESCARGA DE CV (sección Curriculum)
+   Sobreescriben el estilo de .services-box .btn y su icono 5rem
+   ============================================================ */
+#curriculum .services-box .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    width: auto;
+    margin-top: 1.6rem;
+    padding: 1.1rem 2.6rem;
+    border-radius: 4rem;
+    background: var(--grad);
+    color: #06121a;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 10px 24px -10px var(--ring);
+    transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+#curriculum .services-box .btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.08);
+    color: #06121a;
+    background: var(--grad);
+    box-shadow: 0 16px 34px -10px var(--ring);
+}
+/* Icono del botón: anula el 5rem/display:block de .services-box i */
+#curriculum .services-box .btn i {
+    font-size: 1.9rem;
+    display: inline-flex;
+    margin: 0;
+    color: #06121a;
+}

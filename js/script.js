@@ -77,6 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_programming_languages: "Lenguajes de Programación",
             nav_contact: "Contacto",
             nav_lang_toggle: "English",
+            nav_fusalabs: "Fusalabs",
+            fusalabs_tagline: "Mi software factory: desarrollo de productos web a medida, e-commerce y soluciones con IA para empresas y emprendedores.",
             home_role_static: "Hola yo soy",
             home_name: "Fabio Arias",
             home_subtitle: "Yo soy",
@@ -113,6 +115,16 @@ document.addEventListener('DOMContentLoaded', () => {
             cert_web_dev_teaching_description: "Certificado sobre metodologías para la enseñanza del desarrollo web.",
             cert_mern_stack_title: "Desarrollo fullstack de aplicaciones con stack MERN",
             cert_mern_stack_description: "Certificado de desarrollo web con el stack MERN en la plataforma DonWeb.",
+            cert_microsoft_azure_title: "Microsoft Certified: Azure AI Engineer Associate",
+            cert_microsoft_azure_description: "Certificación oficial de Microsoft que valida la capacidad de diseñar e implementar soluciones de IA con Azure AI Services, Machine Learning y procesamiento de lenguaje natural.",
+            cert_azure_bootcamp_title: "Bootcamp Azure AI Engineer Associate",
+            cert_azure_bootcamp_description: "Bootcamp intensivo de 12 semanas (+26 horas) de Código Facilito, enfocado en la preparación para la certificación Azure AI Engineer.",
+            cert_fullstack_fundamentals_title: "Fundamentos del Desarrollo Web: Full Stack",
+            cert_fullstack_fundamentals_description: "Certificado de LinkedIn Learning sobre los fundamentos del desarrollo web full stack y front-end.",
+            cert_blockchain_title: "Fundamentos de la Tecnología Blockchain",
+            cert_blockchain_description: "Certificado de LinkedIn Learning sobre los conceptos y fundamentos de la tecnología blockchain.",
+            cert_fintech_title: "Fundamentos de Fintech (Finanzas Tecnológicas)",
+            cert_fintech_description: "Certificado de LinkedIn Learning sobre los fundamentos de las finanzas tecnológicas y el ecosistema fintech.",
             cert_giving_classes_title: "El ABC de dar clases",
             cert_giving_classes_description: "Certificado sobre los fundamentos básicos para impartir clases y capacitaciones.",
             cert_ai_fundamentals_title: "Fundamentos de la Inteligencia Artificial",
@@ -169,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mongodb_description: "Experiencia con la base de datos NoSQL orientada a documentos, ideal para el desarrollo de aplicaciones modernas y flexibles.",
             email_services_title: "Servicios de Email",
             email_services_description: "Experiencia en la implementación de servicios para el envío de notificaciones por correo electrónico, como restablecimiento de contraseñas y verificaciones de cuenta.",
-            languages_heading_title: "Lenguajes de Programación",
+            languages_heading_title: "Lenguajes de",
             languages_heading_span: "Programación",
             c_title: "C",
             c_description: "Sólidos fundamentos en el lenguaje de programación C, incluyendo manejo de memoria, estructuras de datos y algoritmos.",
@@ -192,6 +204,14 @@ document.addEventListener('DOMContentLoaded', () => {
             pnpm_title: "PNPM",
             pnpm_description: "Manejo del gestor de paquetes para Node.js, reconocido por su gran eficiencia en el uso del espacio de disco y su velocidad en la instalación.",
            
+            project_mfcrm_title: "MF-CRM — Consultoría Jurídica",
+            project_mfcrm_description: "Plataforma SPA de gestión integral y calculadora de liquidaciones laborales/ART para estudios jurídicos. Modelo SaaS freemium con cálculos automatizados.",
+            project_fusalabs_title: "Fusalabs — Software Factory",
+            project_fusalabs_description: "Empresa que fundé: desarrollo de productos web a medida, e-commerce y soluciones con IA para empresas y emprendedores.",
+            project_citronela_title: "Citronela — E-commerce de botánica",
+            project_citronela_description: "Tienda online de productos botánicos con catálogo, carrito, gestión de pedidos y pasarela de pago. Integración con WhatsApp Business API.",
+            project_plumauy_title: "PlumaUy — Papelería artesanal",
+            project_plumauy_description: "Plataforma e-commerce para una marca de papelería artesanal, con catálogo, carrito y checkout. Diseño responsive enfocado en marca y conversión.",
             project_tesloshop_frontend_title: "Aplicacion TesloShop Frontend",
             project_tesloshop_frontend_description: "Desarrollo de un e-commerce Frontend con Vite y Vanilla Js, Implementando WebSockets para la comunicacion en tiempo real. Demuestra habilidad en la creacion de interfaces dinamicas, integracion de APIs y manejo de estados",
 
@@ -247,6 +267,8 @@ project_superflight_tittle:"Aplicacion de SuperFlight",
             nav_programming_languages: "Programming Languages",
             nav_contact: "Contact",
             nav_lang_toggle: "Español",
+            nav_fusalabs: "Fusalabs",
+            fusalabs_tagline: "My software factory: custom web product development, e-commerce, and AI solutions for businesses and entrepreneurs.",
             home_greeting: "Hello, I'm",
             home_name: "Fabio Arias",
             home_role_static: "I'm a",
@@ -283,6 +305,16 @@ project_superflight_tittle:"Aplicacion de SuperFlight",
             cert_web_dev_teaching_description: "Certificate on methodologies for teaching web development.",
             cert_mern_stack_title: "Fullstack development of applications with MERN stack",
             cert_mern_stack_description: "Web development certificate with the MERN stack on the DonWeb platform.",
+            cert_microsoft_azure_title: "Microsoft Certified: Azure AI Engineer Associate",
+            cert_microsoft_azure_description: "Official Microsoft certification validating the ability to design and implement AI solutions using Azure AI Services, Machine Learning and natural language processing.",
+            cert_azure_bootcamp_title: "Azure AI Engineer Associate Bootcamp",
+            cert_azure_bootcamp_description: "Intensive 12-week (26+ hours) bootcamp by Código Facilito, focused on preparing for the Azure AI Engineer certification.",
+            cert_fullstack_fundamentals_title: "Web Development Fundamentals: Full Stack",
+            cert_fullstack_fundamentals_description: "LinkedIn Learning certificate on the fundamentals of full stack and front-end web development.",
+            cert_blockchain_title: "Blockchain Technology Fundamentals",
+            cert_blockchain_description: "LinkedIn Learning certificate on the concepts and fundamentals of blockchain technology.",
+            cert_fintech_title: "Fintech (Financial Technology) Fundamentals",
+            cert_fintech_description: "LinkedIn Learning certificate on the fundamentals of financial technology and the fintech ecosystem.",
             cert_giving_classes_title: "The ABC of teaching classes",
             cert_giving_classes_description: "Certificate on the basic fundamentals for teaching classes and training.",
             cert_ai_fundamentals_title: "Fundamentals of Artificial Intelligence",
@@ -339,7 +371,7 @@ project_superflight_tittle:"Aplicacion de SuperFlight",
             mongodb_description: "Experience with the document-oriented NoSQL database, ideal for developing modern and flexible applications.",
             email_services_title: "Email Services",
             email_services_description: "Experience in implementing services for sending email notifications, such as password resets and account verifications.",
-            languages_heading_title: "Programming Languages",
+            languages_heading_title: "Programming",
             languages_heading_span: "Languages",
             c_title: "C",
             c_description: "Solid fundamentals in the C programming language, including memory management, data structures, and algorithms.",
@@ -364,6 +396,14 @@ project_superflight_tittle:"Aplicacion de SuperFlight",
             
             portfolio_heading: "The Last",
             portfolio_heading_span:"Projects",
+            project_mfcrm_title: "MF-CRM — Legal Consultancy",
+            project_mfcrm_description: "Full management SPA and labor severance/occupational-risk (ART) calculator for law firms. Freemium SaaS model with automated calculations.",
+            project_fusalabs_title: "Fusalabs — Software Factory",
+            project_fusalabs_description: "The company I founded: custom web product development, e-commerce, and AI solutions for businesses and entrepreneurs.",
+            project_citronela_title: "Citronela — Botanical e-commerce",
+            project_citronela_description: "Online store for botanical products with catalog, cart, order management, and payment gateway. WhatsApp Business API integration.",
+            project_plumauy_title: "PlumaUy — Artisanal stationery",
+            project_plumauy_description: "E-commerce platform for an artisanal stationery brand, with catalog, cart, and checkout. Responsive, brand-focused, conversion-oriented design.",
             project_tesloshop_frontend_title: "TesloShop Frontend Application",
         project_tesloshop_frontend_description: "Development of an e-commerce Frontend with Vite and Vanilla JS, implementing WebSockets for real-time communication. This project showcases skills in building dynamic interfaces, API integration, and state management.",
         
@@ -610,53 +650,62 @@ document.addEventListener('DOMContentLoaded', () => {
     let startX = 0;
     let startY = 0;
 
+    // Detectar clic real vs arrastre del carrusel (evita abrir al deslizar)
     galleryImages.forEach((img, index) => {
         img.style.cursor = 'zoom-in';
-
-        // Detectar inicio de clic
         img.addEventListener('mousedown', (e) => {
             startX = e.clientX;
             startY = e.clientY;
         });
-
-        // Detectar fin de clic
-        img.addEventListener('click', (e) => {
-            // Calcular distancia movida
-            const moveX = Math.abs(e.clientX - startX);
-            const moveY = Math.abs(e.clientY - startY);
-
-            // Si se movió menos de 10px, es un CLIC. Si más, es ARRASTRE.
-            if (moveX < 10 && moveY < 10) {
-                e.preventDefault();
-                e.stopPropagation();
-                // IMPORTANTE: Pasamos el índice correcto
+        img.addEventListener('mouseup', (e) => {
+            const movedX = Math.abs(e.clientX - startX);
+            const movedY = Math.abs(e.clientY - startY);
+            if (movedX < 10 && movedY < 10) {
+                openModal(index);
+            }
+        });
+        img.addEventListener('touchstart', (e) => {
+            startX = e.changedTouches[0].clientX;
+            startY = e.changedTouches[0].clientY;
+        }, { passive: true });
+        img.addEventListener('touchend', (e) => {
+            const movedX = Math.abs(e.changedTouches[0].clientX - startX);
+            const movedY = Math.abs(e.changedTouches[0].clientY - startY);
+            if (movedX < 10 && movedY < 10) {
                 openModal(index);
             }
         });
     });
 
-    // --- CONTROLES DEL MODAL ---
-
-    // Botones de Flechas
+    // --- BOTONES DE NAVEGACIÓN ---
     if (nextBtn) nextBtn.addEventListener('click', showNext);
     if (prevBtn) prevBtn.addEventListener('click', showPrev);
-    
-    // Botón Cerrar
+
+    // --- CERRAR ---
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
 
-    // Clic fuera de la imagen (Overlay)
+    // Clic en el overlay (fuera de la imagen) cierra el modal
     modal.addEventListener('click', (e) => {
         if (e.target === modal || e.target.classList.contains('lightbox-content')) {
             closeModal();
         }
     });
 
-    // Navegación por TECLADO (Accesibilidad)
+    // --- TECLADO: ESC cierra, flechas navegan ---
     document.addEventListener('keydown', (e) => {
         if (!modal.classList.contains('active')) return;
-
         if (e.key === 'Escape') closeModal();
-        if (e.key === 'ArrowRight') showNext();
-        if (e.key === 'ArrowLeft') showPrev();
+        else if (e.key === 'ArrowRight') showNext();
+        else if (e.key === 'ArrowLeft') showPrev();
+    });
+
+    // --- SWIPE en el modal (móvil) para navegar ---
+    modalImg.addEventListener('touchstart', (e) => {
+        startX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    modalImg.addEventListener('touchend', (e) => {
+        const diff = e.changedTouches[0].clientX - startX;
+        if (diff < -50) showNext();
+        else if (diff > 50) showPrev();
     });
 });
