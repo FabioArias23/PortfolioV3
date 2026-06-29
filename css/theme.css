@@ -69,6 +69,16 @@ body::after {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    flex-shrink: 0;
+    margin-right: 2rem;          /* separa el logo del menú */
+}
+/* Aire entre logo y navegación + espaciado de items */
+.header { gap: 2.5rem; }
+.navbar { gap: 1.8rem; }
+@media (max-width: 1350px) {
+    .header { gap: 1.5rem; }
+    .navbar { gap: 1.3rem; }
+    .logo { margin-right: 1rem; }
 }
 .navbar a {
     font-family: 'Inter', sans-serif;
